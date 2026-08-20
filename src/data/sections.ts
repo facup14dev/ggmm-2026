@@ -1,13 +1,40 @@
-import type { Module, Section } from "../types/section";
+import type {
+  Module,
+  Section,
+} from "../types/section";
 
 export const sections: Section[] = [
   {
     id: "inicio",
     label: "Inicio",
     title: "Comience la transformación digital de su municipio",
-    eyebrow: "Plataforma integral modular para Gobiernos Municipales",
-    description: "Una solución tecnológica diseñada para modernizar la gestión municipal, integrar áreas y simplificar la relación con el ciudadano.",
+    eyebrow:
+      "Plataforma integral modular para gobiernos municipales",
+    description:
+      "GGMM integra las áreas clave del municipio en una única plataforma para mejorar la recaudación, optimizar procesos internos y brindar mejores servicios al ciudadano.",
     ctaLabel: "Ver módulos de integración",
+    features: [
+      {
+        title: "Información precisa",
+        description:
+          "Contar con información precisa para tomar decisiones.",
+      },
+      {
+        title: "Mayor recaudación",
+        description:
+          "Incrementar la capacidad de gestión tributaria y la cobranza.",
+      },
+      {
+        title: "Control del gasto",
+        description:
+          "Controlar gastos, imputaciones y responsables.",
+      },
+      {
+        title: "Más servicios digitales",
+        description:
+          "Permitir pagos y gestiones por internet sin trasladar al contribuyente.",
+      },
+    ],
   },
   {
     id: "software",
@@ -16,27 +43,27 @@ export const sections: Section[] = [
     title: "Nuestro Software",
     eyebrow: "Plataforma integral modular",
     description:
-      "Una arquitectura flexible, modular y escalable preparada para acompañar las necesidades de cada gobierno local.",
+      "Una solución integral, modular y escalable para administrar de forma centralizada los procesos críticos del gobierno municipal.",
     features: [
       {
         title: "Digitalización integral",
         description:
-          "Procesos municipales conectados dentro de una misma plataforma.",
+          "Procesos municipales conectados dentro de una única plataforma.",
       },
       {
         title: "Modular y escalable",
         description:
-          "Cada municipio puede incorporar módulos según sus necesidades.",
+          "Cada municipio puede incorporar módulos de acuerdo a sus necesidades.",
       },
       {
         title: "Arquitectura multicapa",
         description:
-          "Separación lógica de componentes para facilitar evolución y mantenimiento.",
+          "Preparada para evolucionar y sostener crecimiento funcional.",
       },
       {
         title: "Licencia abierta",
         description:
-          "Una solución diseñada para garantizar continuidad y autonomía.",
+          "Pensada para brindar continuidad operativa y autonomía tecnológica.",
       },
     ],
   },
@@ -45,29 +72,29 @@ export const sections: Section[] = [
     label: "Beneficios Municipales",
     number: "07",
     title: "Beneficios Municipales",
-    eyebrow: "Gestión que genera resultados",
+    eyebrow: "Resultados concretos para la gestión",
     description:
-      "Herramientas orientadas a mejorar la recaudación, simplificar procesos y brindar mejores servicios al contribuyente.",
+      "GGMM aporta control, trazabilidad e información en tiempo real para fortalecer la gestión municipal y la relación con el contribuyente.",
     features: [
       {
-        title: "Incrementar recaudación",
+        title: "Aumentar recaudación",
         description:
-          "Mejor seguimiento tributario y mayor capacidad de gestión.",
+          "Mejor gestión tributaria, cobranza y autogestión de contribuyentes.",
       },
       {
-        title: "Mejores medios de pago",
+        title: "Mejor información",
         description:
-          "Más alternativas para facilitar el cumplimiento del contribuyente.",
+          "Datos consolidados para toma de decisiones por parte de directivos.",
       },
       {
-        title: "Procesos integrados",
+        title: "Control administrativo",
         description:
-          "Las áreas trabajan sobre una única plataforma.",
+          "Orden en contabilidad, finanzas, imputaciones y responsables.",
       },
       {
-        title: "Información centralizada",
+        title: "Servicios ciudadanos",
         description:
-          "Datos consistentes y disponibles para la toma de decisiones.",
+          "Más trámites, pagos y consultas online para reducir fricción.",
       },
     ],
   },
@@ -76,29 +103,29 @@ export const sections: Section[] = [
     label: "Servicios Integrales",
     number: "08",
     title: "Servicios Integrales",
-    eyebrow: "Acompañamiento permanente",
+    eyebrow: "Herramientas complementarias",
     description:
-      "Implementación, soporte, capacitación y servicios profesionales para acompañar cada etapa de la transformación digital.",
+      "Además del núcleo funcional, GGMM incorpora herramientas específicas que potencian la experiencia operativa y la atención al ciudadano.",
     features: [
       {
-        title: "Implementación",
+        title: "Autogestión de proveedores",
         description:
-          "Acompañamiento técnico durante la puesta en marcha.",
+          "Mejora la vinculación y el circuito administrativo con proveedores.",
       },
       {
-        title: "Capacitación",
+        title: "Autogestión de contribuyentes",
         description:
-          "Formación orientada a usuarios y equipos municipales.",
+          "Canal digital para consultas, pagos y trámites.",
       },
       {
-        title: "Soporte",
+        title: "Cobranza electrónica múltiple entidad",
         description:
-          "Asistencia técnica permanente para la operación diaria.",
+          "Amplía medios de pago y facilita la cobranza municipal.",
       },
       {
-        title: "Evolución continua",
+        title: "Multa digital / Estacionamiento digital",
         description:
-          "Mejoras y nuevas funcionalidades según cada necesidad.",
+          "Servicios específicos para control, fiscalización y atención.",
       },
     ],
   },
@@ -109,27 +136,27 @@ export const sections: Section[] = [
     title: "Avales y Calidad",
     eyebrow: "Experiencia respaldada",
     description:
-      "Procesos, certificaciones y reconocimientos que respaldan la calidad de nuestras soluciones.",
+      "Una plataforma orientada a procesos municipales reales, diseñada para brindar continuidad, trazabilidad y capacidad de crecimiento.",
     features: [
-      {
-        title: "Procesos certificados",
-        description:
-          "Metodologías orientadas a asegurar calidad y previsibilidad.",
-      },
       {
         title: "Experiencia municipal",
         description:
-          "Conocimiento construido junto a gobiernos locales.",
+          "Solución pensada específicamente para gobiernos locales.",
       },
       {
-        title: "Reconocimientos",
+        title: "Evolución continua",
         description:
-          "Trayectoria respaldada por instituciones y clientes.",
+          "Arquitectura preparada para incorporar nuevos módulos y servicios.",
       },
       {
-        title: "Mejora continua",
+        title: "Gestión centralizada",
         description:
-          "Revisión permanente de procesos, tecnología y producto.",
+          "Una base única de información para áreas interdependientes.",
+      },
+      {
+        title: "Visión integral",
+        description:
+          "Combina gestión interna, tributaria y servicios digitales.",
       },
     ],
   },
@@ -137,51 +164,291 @@ export const sections: Section[] = [
 
 export const modules: Module[] = [
   {
+    id: "directivos",
+    label: "Directivos",
+    title: "Directivos",
+    shortDescription:
+      "Información precisa para la toma de decisiones.",
+    description:
+      "Brinda a los responsables de gestión una visión integral del municipio mediante información consolidada, indicadores y reportes para la toma de decisiones.",
+
+    accentLabel: "Información para decidir",
+
+    metric: {
+      value: "360°",
+      label: "Visión integral de la gestión municipal",
+    },
+
+    relatedSolutions: [
+      "Reportes inteligentes (BI)",
+      "Información centralizada",
+      "Trazabilidad de procesos",
+    ],
+
+    impacts: [
+      "Contar con información precisa para tomar decisiones",
+      "Mayor control y seguimiento de la gestión",
+    ],
+  },
+
+  {
+    id: "administracionTributaria",
+    label: "Adm. Tributaria",
+    title: "Administración Tributaria",
+    shortDescription:
+      "Recaudación, contribuyentes y gestión tributaria.",
+    description:
+      "Centraliza la gestión tributaria municipal, mejora la recaudación y facilita la administración de tasas, contribuyentes y circuitos de cobranza.",
+
+    accentLabel: "Potenciar la recaudación",
+
+    metric: {
+      value: "+",
+      label: "Más herramientas para gestionar ingresos municipales",
+    },
+
+    relatedSolutions: [
+      "Autogestión de contribuyentes",
+      "Cobranza electrónica múltiple entidad",
+      "Multa digital",
+    ],
+
+    impacts: [
+      "Aumentar la recaudación municipal",
+      "Mejorar la atención y autogestión del contribuyente",
+      "Ampliar canales y alternativas de cobranza",
+    ],
+  },
+
+  {
+    id: "administracionFinanciera",
+    label: "Adm. Financiera",
+    title: "Administración Financiera",
+    shortDescription:
+      "Control de gastos, presupuesto y responsables.",
+    description:
+      "Permite controlar presupuestos, gastos, responsables y circuitos financieros del municipio con mayor visibilidad, trazabilidad y orden administrativo.",
+
+    accentLabel: "Control financiero",
+
+    metric: {
+      value: "360°",
+      label: "Seguimiento integral de gastos y responsables",
+    },
+
+    relatedSolutions: [
+      "Autogestión de proveedores",
+      "Control presupuestario",
+      "Seguimiento financiero",
+    ],
+
+    impacts: [
+      "Controlar los gastos y sus responsables",
+      "Fortalecer el seguimiento presupuestario",
+      "Mejorar la trazabilidad de los movimientos financieros",
+    ],
+  },
+
+  {
+    id: "administracionContable",
+    label: "Adm. Contable",
+    title: "Administración Contable",
+    shortDescription:
+      "Imputaciones, registración y contabilidad al día.",
+    description:
+      "Ordena la contabilidad municipal, permite controlar imputaciones y mantener actualizada la registración contable con mayor consistencia e integración.",
+
+    accentLabel: "Contabilidad integrada",
+
+    metric: {
+      value: "1",
+      label: "Circuito centralizado para información contable",
+    },
+
+    relatedSolutions: [
+      "Integración contable",
+      "Imputaciones automáticas",
+      "Control de movimientos",
+    ],
+
+    impacts: [
+      "Controlar imputaciones y mantener la contabilidad al día",
+      "Reducir inconsistencias entre áreas",
+      "Centralizar la registración de movimientos",
+    ],
+  },
+
+  {
     id: "catastro",
     label: "Catastro",
-    title: "Gestión integral de Catastro",
-    shortDescription: "Información territorial integrada.",
+    title: "Catastro",
+    shortDescription:
+      "Información territorial y padrón integrado.",
     description:
-      "Centralizá información parcelaria, territorial y administrativa dentro de una única herramienta de gestión.",
+      "Integra información territorial, padrón y datos parcelarios para fortalecer la gestión del territorio y mejorar la calidad de la base tributaria.",
+
+    accentLabel: "Territorio conectado",
+
+    metric: {
+      value: "GIS",
+      label: "Información geográfica integrada a la gestión",
+    },
+
+    relatedSolutions: [
+      "Catastro GIS",
+      "Integración con obras privadas",
+      "Integración con catastro provincial",
+    ],
+
+    impacts: [
+      "Integrar obras privadas y catastro provincial con la gestión tributaria",
+      "Actualizar y consolidar información territorial",
+      "Fortalecer la base para control y recaudación",
+    ],
   },
+
+  {
+    id: "accionSocial",
+    label: "Acción Social",
+    title: "Acción Social",
+    shortDescription:
+      "Beneficios, subsidios y padrón unificado.",
+    description:
+      "Gestiona beneficios y subsidios integrando una única base de datos para mejorar el seguimiento, la administración y el control de políticas sociales.",
+
+    accentLabel: "Padrón social unificado",
+
+    metric: {
+      value: "1",
+      label: "Base central para beneficios y subsidios",
+    },
+
+    relatedSolutions: [
+      "Base única de padrón",
+      "Seguimiento de beneficiarios",
+      "Gestión de subsidios",
+    ],
+
+    impacts: [
+      "Gestionar beneficios y subsidios desde una única base de datos",
+      "Mejorar el seguimiento de beneficiarios",
+      "Reducir duplicidades e inconsistencias",
+    ],
+  },
+
+  {
+    id: "atencionVecino",
+    label: "At. al Vecino",
+    title: "Atención al Vecino",
+    shortDescription:
+      "Mejor vinculación y servicios al ciudadano.",
+    description:
+      "Centraliza la atención al ciudadano y mejora la experiencia de los vecinos a través de canales más ágiles, servicios digitales y una gestión más ordenada.",
+
+    accentLabel: "Municipio más cerca",
+
+    metric: {
+      value: "Online",
+      label: "Gestiones y servicios sin traslado innecesario",
+    },
+
+    relatedSolutions: [
+      "Autogestión de contribuyentes",
+      "Pagos y gestiones online",
+      "Canales de atención",
+    ],
+
+    impacts: [
+      "Permitir pagos y gestiones por internet",
+      "Reducir traslados del contribuyente a la municipalidad",
+      "Mejorar la experiencia de atención al ciudadano",
+    ],
+  },
+
+  {
+    id: "turismo",
+    label: "Turismo",
+    title: "Turismo",
+    shortDescription:
+      "Información y servicios para visitantes.",
+    description:
+      "Ofrece servicios e información útil a visitantes y fortalece la gestión municipal del área turística mediante herramientas digitales específicas.",
+
+    accentLabel: "Información para visitantes",
+
+    metric: {
+      value: "24/7",
+      label: "Acceso digital a información y servicios turísticos",
+    },
+
+    relatedSolutions: [
+      "Información para visitantes",
+      "Servicios digitales",
+      "Canales de consulta",
+    ],
+
+    impacts: [
+      "Ofrecer servicios e información a los visitantes de la ciudad",
+      "Facilitar el acceso a información turística",
+      "Fortalecer la presencia digital del municipio",
+    ],
+  },
+
   {
     id: "rrhh",
     label: "RRHH",
     title: "Recursos Humanos",
-    shortDescription: "Administración eficiente del personal.",
+    shortDescription:
+      "Novedades, haberes y administración de personal.",
     description:
-      "Gestioná legajos, novedades, procesos administrativos y datos del personal municipal de forma centralizada.",
+      "Gestiona recursos humanos, novedades y liquidación de haberes para sostener una administración más ordenada, centralizada y confiable de la nómina municipal.",
+
+    accentLabel: "Gestión integral del personal",
+
+    metric: {
+      value: "1",
+      label: "Legajo y novedades dentro de una misma gestión",
+    },
+
+    relatedSolutions: [
+      "Gestión de novedades",
+      "Liquidación de haberes",
+      "Administración de legajos",
+    ],
+
+    impacts: [
+      "Controlar las novedades del personal",
+      "Liquidar los haberes de la nómina",
+      "Centralizar información laboral y administrativa",
+    ],
   },
+
   {
-    id: "rentas",
-    label: "Rentas",
-    title: "Gestión Tributaria",
-    shortDescription: "Recaudación y cuenta corriente.",
+    id: "rodados",
+    label: "Rodados",
+    title: "Rodados",
+    shortDescription:
+      "Gestión profesional de vehículos y maquinaria.",
     description:
-      "Administrá obligaciones, cuentas corrientes, recaudación y seguimiento tributario de manera integrada.",
-  },
-  {
-    id: "tribunal",
-    label: "Tribunal",
-    title: "Tribunal de Faltas",
-    shortDescription: "Gestión de infracciones y expedientes.",
-    description:
-      "Digitalizá y organizá actuaciones, infracciones, expedientes y resoluciones administrativas.",
-  },
-  {
-    id: "servicios",
-    label: "Servicios",
-    title: "Servicios Municipales",
-    shortDescription: "Gestión transversal de servicios.",
-    description:
-      "Coordiná servicios, solicitudes, tareas y operaciones entre distintas áreas municipales.",
-  },
-  {
-    id: "recaudacion",
-    label: "Recaudación",
-    title: "Recaudación Integrada",
-    shortDescription: "Cobros y medios de pago.",
-    description:
-      "Integra medios de pago, cobranzas, conciliaciones y seguimiento de ingresos municipales.",
+      "Permite administrar de manera profesional vehículos, maquinaria y recursos móviles del municipio, mejorando el control, seguimiento y disponibilidad de los activos.",
+
+    accentLabel: "Control de activos móviles",
+
+    metric: {
+      value: "360°",
+      label: "Seguimiento integral de vehículos y maquinaria",
+    },
+
+    relatedSolutions: [
+      "Gestión de flota",
+      "Control operativo",
+      "Seguimiento de activos",
+    ],
+
+    impacts: [
+      "Gestionar de manera profesional vehículos y maquinaria",
+      "Mejorar el control y disponibilidad de los activos",
+      "Centralizar información operativa de la flota municipal",
+    ],
   },
 ];

@@ -1,9 +1,6 @@
 import {
   BadgeCheck,
-  Building2,
-  CreditCard,
   Layers3,
-  LockKeyhole,
   TrendingUp,
 } from "lucide-react";
 
@@ -15,175 +12,238 @@ import type {
 type Props = {
   section: Section;
   activeModule: Module | null;
+  compact?: boolean;
 };
-
-const fallbackIcons = [
-  Building2,
-  Layers3,
-  TrendingUp,
-  LockKeyhole,
-];
 
 function BrochurePanel({
   section,
   activeModule,
+  compact = false,
 }: Props) {
   if (activeModule) {
     return (
-      <aside className="overflow-hidden rounded-[1.8rem] border border-[#d8cdbd] bg-[#f8f3e9] shadow-[0_30px_70px_rgba(67,48,32,0.18)]">
-        <div className="p-7">
-          <span className="text-xs font-black uppercase tracking-[0.2em] text-[#74152b]">
+      <aside className="flex h-full min-h-0 flex-col overflow-hidden rounded-[1.9rem] border border-[#d8cdbd] bg-[#f8f3e9] shadow-[0_25px_60px_rgba(67,48,32,0.16)]">
+        {/* CABECERA */}
+        <div
+          className={`shrink-0 ${
+            compact ? "p-6" : "p-7"
+          }`}
+        >
+          <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#8d1430]">
             Módulo GGMM
           </span>
 
-          <h2 className="mt-4 font-serif text-3xl font-bold leading-tight text-[#211a18]">
+          <h2
+            className={`mt-3 font-serif font-bold leading-tight text-[#211a18] ${
+              compact
+                ? "text-4xl"
+                : "text-3xl"
+            }`}
+          >
             {activeModule.title}
           </h2>
 
-          <p className="mt-4 leading-7 text-[#655a52]">
+          <p
+            className={`text-[#655a52] ${
+              compact
+                ? "mt-4 text-base leading-7"
+                : "mt-4 text-sm leading-6"
+            }`}
+          >
             {activeModule.description}
           </p>
+
+          {/* BLOQUE DESTACADO DEL MÓDULO */}
+          {activeModule.accentLabel && (
+            <div className="mt-6 grid grid-cols-[1fr_auto] items-center gap-4 rounded-2xl bg-[#8d1430] p-5 text-white">
+              <div>
+                <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/60">
+                  Objetivo
+                </p>
+
+                <p className="mt-1 font-serif text-xl font-bold leading-tight">
+                  {activeModule.accentLabel}
+                </p>
+              </div>
+
+              {activeModule.metric && (
+                <div className="border-l border-white/20 pl-4 text-right">
+                  <p className="font-serif text-3xl font-black leading-none">
+                    {activeModule.metric.value}
+                  </p>
+
+                  <p className="mt-2 max-w-[115px] text-[9px] leading-4 text-white/65">
+                    {activeModule.metric.label}
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
-        <div className="border-y border-[#ddd2c1] bg-[#efe7d8]/70 p-6">
-          <div className="grid gap-3">
-            <MiniFeature
-              icon={Layers3}
-              title="Integrado"
-              text="Conectado al resto de los módulos de la plataforma."
-            />
+        {/* CONTENIDO SCROLLEABLE */}
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          {/* SOLUCIONES RELACIONADAS */}
+          <div className="border-y border-[#ddd2c1] bg-[#efe7d8]/70 p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#8d1430]">
+              Soluciones relacionadas
+            </p>
 
-            <MiniFeature
-              icon={TrendingUp}
-              title="Escalable"
-              text="Preparado para acompañar el crecimiento del municipio."
-            />
+            <div className="mt-4 grid gap-3">
+              {activeModule.relatedSolutions?.map(
+                (item) => (
+                  <MiniFeature
+                    key={item}
+                    icon={Layers3}
+                    title={item}
+                    text="Herramienta complementaria del ecosistema GGMM."
+                  />
+                ),
+              )}
+            </div>
+          </div>
 
-            <MiniFeature
-              icon={BadgeCheck}
-              title="Especializado"
-              text="Diseñado específicamente para procesos municipales."
-            />
+          {/* IMPACTOS */}
+          <div className="p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#8d1430]">
+              Impactos
+            </p>
+
+            <div className="mt-4 grid gap-3">
+              {activeModule.impacts?.map(
+                (impact) => (
+                  <Highlight
+                    key={impact}
+                    icon={TrendingUp}
+                    title={impact}
+                    text="Resultado esperado en la gestión municipal."
+                  />
+                ),
+              )}
+            </div>
           </div>
         </div>
 
-        <div className="bg-[#74152b] px-7 py-7 text-white">
+        {/* FOOTER FIJO */}
+        {/* <div className="shrink-0 bg-[#8d1430] px-6 py-5 text-white">
           <p className="font-serif text-3xl font-black">
             ggmm
           </p>
 
-          <p className="mt-2 text-sm text-white/70">
-            Tecnología para gobiernos municipales.
-          </p>
-        </div>
+          <div className="mt-2 flex items-end justify-between gap-4">
+            <p className="text-xs text-white/70">
+              Gestión Gubernamental Municipal
+            </p>
+
+            <p className="text-right text-[10px] uppercase tracking-[0.18em] text-white/55">
+              Plataforma
+              <br />
+              integral
+            </p>
+          </div>
+        </div> */}
       </aside>
     );
   }
 
   return (
-    <aside className="overflow-hidden rounded-[1.8rem] border border-[#d8cdbd] bg-[#f8f3e9] shadow-[0_30px_70px_rgba(67,48,32,0.18)]">
+    <aside className="flex h-full min-h-0 flex-col overflow-hidden rounded-[1.9rem] border border-[#d8cdbd] bg-[#f8f3e9] shadow-[0_25px_60px_rgba(67,48,32,0.16)]">
       {/* CABECERA */}
-      <div className="p-7">
+      <div className="shrink-0 p-6">
         <div className="flex items-start gap-3">
           {section.number && (
-            <span className="font-serif text-4xl font-black leading-none text-[#74152b]">
+            <span className="font-serif text-5xl font-black leading-none text-[#8d1430]">
               {section.number}
             </span>
           )}
 
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#887b70]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#887b70]">
               GGMM
             </p>
 
-            <h2 className="mt-1 font-serif text-2xl font-black uppercase leading-tight text-[#211a18]">
+            <h2 className="mt-1 font-serif text-3xl font-black uppercase leading-tight text-[#211a18]">
               {section.title}
             </h2>
           </div>
         </div>
 
-        <p className="mt-4 text-sm leading-6 text-[#655a52]">
+        <p className="mt-4 text-sm leading-7 text-[#655a52]">
           {section.description}
         </p>
       </div>
 
-      {/* FEATURES */}
-      {section.features &&
-        section.features.length > 0 && (
-          <div className="grid grid-cols-2 gap-3 border-y border-[#ddd2c1] bg-[#eee6d9]/60 p-5">
-            {section.features.map(
-              (feature, index) => {
-                const Icon =
-                  fallbackIcons[
-                    index %
-                      fallbackIcons.length
-                  ];
+      {/* CONTENIDO SCROLLEABLE */}
+      <div className="min-h-0 flex-1 overflow-y-auto">
+        {/* BENEFICIOS DE LA SECCIÓN */}
+        {section.features &&
+          section.features.length > 0 && (
+            <div className="border-y border-[#ddd2c1] bg-[#eee6d9]/60 p-5">
+              <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#8d1430]">
+                Beneficios destacados
+              </p>
 
-                return (
-                  <article
-                    key={feature.title}
-                    className="rounded-xl border border-[#ded3c3] bg-white p-4 shadow-sm"
-                  >
-                    <Icon
-                      size={22}
-                      className="text-[#74152b]"
+              <div className="mt-4 grid gap-3">
+                {section.features.map(
+                  (feature) => (
+                    <Highlight
+                      key={feature.title}
+                      icon={BadgeCheck}
+                      title={feature.title}
+                      text={feature.description}
                     />
+                  ),
+                )}
+              </div>
+            </div>
+          )}
 
-                    <h3 className="mt-3 text-sm font-bold leading-tight text-[#2a2421]">
-                      {feature.title}
-                    </h3>
+        {/* HERRAMIENTAS DEL ECOSISTEMA */}
+        <div className="p-5">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#8d1430]">
+            Herramientas del ecosistema
+          </p>
 
-                    <p className="mt-2 text-xs leading-5 text-[#776b62]">
-                      {feature.description}
-                    </p>
-                  </article>
-                );
-              },
-            )}
+          <div className="mt-4 grid gap-3">
+            <MiniFeature
+              icon={Layers3}
+              title="Autogestión de proveedores"
+              text="Vinculación administrativa más ágil con proveedores."
+            />
+
+            <MiniFeature
+              icon={Layers3}
+              title="Autogestión de contribuyentes"
+              text="Canal digital para gestiones, consultas y seguimiento."
+            />
+
+            <MiniFeature
+              icon={Layers3}
+              title="Cobranza electrónica múltiple entidad"
+              text="Más medios de pago y mayor capacidad de cobranza."
+            />
+
+            <MiniFeature
+              icon={Layers3}
+              title="Catastro GIS / BI / Multa digital"
+              text="Herramientas complementarias para control, análisis y gestión."
+            />
           </div>
-        )}
-
-      {/* BENEFICIOS DESTACADOS */}
-      <div className="p-6">
-        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#74152b]">
-          Beneficios destacados
-        </p>
-
-        <div className="mt-4 grid gap-3">
-          <Highlight
-            icon={TrendingUp}
-            title="Mayor eficiencia"
-            text="Procesos más simples y mejor capacidad de gestión."
-          />
-
-          <Highlight
-            icon={CreditCard}
-            title="Más alternativas"
-            text="Herramientas para mejorar la experiencia del contribuyente."
-          />
-
-          <Highlight
-            icon={BadgeCheck}
-            title="Gestión respaldada"
-            text="Tecnología orientada a procesos municipales reales."
-          />
         </div>
       </div>
 
-      {/* FOOTER DEL FOLLETO */}
-      <div className="bg-[#74152b] px-7 py-7 text-white">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <p className="font-serif text-3xl font-black">
-              ggmm
-            </p>
+      {/* FOOTER FIJO */}
+      <div className="shrink-0 bg-[#8d1430] px-6 py-5 text-white">
+        <p className="font-serif text-3xl font-black">
+          ggmm
+        </p>
 
-            <p className="mt-2 text-xs text-white/70">
-              Gestión Gubernamental Municipal
-            </p>
-          </div>
+        <div className="mt-2 flex items-end justify-between gap-4">
+          <p className="text-xs text-white/70">
+            Gestión Gubernamental Municipal
+          </p>
 
-          <p className="text-right text-[10px] uppercase tracking-[0.16em] text-white/55">
+          <p className="text-right text-[10px] uppercase tracking-[0.18em] text-white/55">
             Plataforma
             <br />
             integral
@@ -195,7 +255,7 @@ function BrochurePanel({
 }
 
 type MiniFeatureProps = {
-  icon: typeof Building2;
+  icon: typeof Layers3;
   title: string;
   text: string;
 };
@@ -209,12 +269,12 @@ function MiniFeature({
     <div className="rounded-xl border border-[#ded3c3] bg-white p-4">
       <div className="flex items-start gap-3">
         <Icon
-          size={20}
-          className="mt-0.5 shrink-0 text-[#74152b]"
+          size={18}
+          className="mt-0.5 shrink-0 text-[#8d1430]"
         />
 
         <div>
-          <p className="text-sm font-bold">
+          <p className="text-sm font-bold text-[#2a2421]">
             {title}
           </p>
 
@@ -228,7 +288,7 @@ function MiniFeature({
 }
 
 type HighlightProps = {
-  icon: typeof Building2;
+  icon: typeof BadgeCheck;
   title: string;
   text: string;
 };
@@ -240,8 +300,8 @@ function Highlight({
 }: HighlightProps) {
   return (
     <div className="flex items-start gap-3 rounded-xl border border-[#ded3c3] bg-white/70 p-4">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#74152b] text-white">
-        <Icon size={18} />
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#8d1430] text-white">
+        <Icon size={17} />
       </div>
 
       <div>

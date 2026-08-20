@@ -6,12 +6,16 @@ export type SectionId =
   | "calidad";
 
 export type ModuleId =
+  | "directivos"
+  | "administracionTributaria"
+  | "administracionFinanciera"
+  | "administracionContable"
   | "catastro"
+  | "accionSocial"
+  | "atencionVecino"
+  | "turismo"
   | "rrhh"
-  | "rentas"
-  | "tribunal"
-  | "servicios"
-  | "recaudacion";
+  | "rodados";
 
 export type Feature = {
   title: string;
@@ -25,16 +29,35 @@ export type Section = {
   title: string;
   eyebrow?: string;
   description: string;
-
   features?: Feature[];
-
   ctaLabel?: string;
+};
+
+export type ModuleMetric = {
+  value: string;
+  label: string;
 };
 
 export type Module = {
   id: ModuleId;
   label: string;
   title: string;
-  description: string;
   shortDescription: string;
+  description: string;
+
+  relatedSolutions?: string[];
+  impacts?: string[];
+
+  /**
+   * Texto destacado visualmente en el folleto.
+   * Ejemplo:
+   * "Información para decidir"
+   */
+  accentLabel?: string;
+
+  /**
+   * Dato visual / conceptual del módulo.
+   * No necesariamente representa una estadística real.
+   */
+  metric?: ModuleMetric;
 };

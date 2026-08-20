@@ -1,63 +1,81 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const navigation = [
-  "Inicio",
-  "Nuestra Plataforma",
-  "Beneficios Municipales",
-  "Servicios Integrales",
-  "Calidad y Avales",
-  "Casos de Éxito",
-  "Contacto",
-];
-
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#ded5c6] bg-[#f8f4eb]/95 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-375 items-center justify-between px-5 lg:px-10">
-        
-        {/* <a href="#inicio" className="text-3xl font-black tracking-[-0.05em] text-[#74152b]" >
-          ggmm
-        </a> */}
-        <img src="images/ggmmLogo.png" alt="GGMM" className="h-13 w-auto object-contain" />
+    <header className="sticky top-0 z-50 border-b border-[#ded3c6] bg-[#f8f4ec]/95 backdrop-blur">
+      <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 lg:px-10">
+        <a
+          href="#inicio"
+          className="flex items-center gap-4"
+          aria-label="Ir al inicio"
+        >
+          <span className="font-serif text-4xl font-black tracking-[-0.07em] text-[#b62037]">
+            ggmm
+          </span>
 
-        <nav className="hidden items-center gap-7 xl:flex">
-          {navigation.map((item) => (
-            <a
-              key={item}
-              href="#inicio"
-              className="text-sm font-medium text-[#3b312d] transition hover:text-[#74152b]"
-            >
-              {item}
-            </a>
-          ))}
+          <span className="hidden text-[10px] font-bold uppercase tracking-[0.18em] text-[#857970] sm:block">
+            Gestión Gubernamental Municipal
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-8 lg:flex">
+          <a
+            href="#inicio"
+            className="text-sm font-semibold text-[#514740] transition hover:text-[#8d1430]"
+          >
+            Plataforma
+          </a>
+
+          {/* <a
+            href="#contacto"
+            className="text-sm font-semibold text-[#514740] transition hover:text-[#8d1430]"
+          >
+            Contacto
+          </a> */}
+
+          <a
+            href="#contacto"
+            className="rounded-xl bg-[#8d1430] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-[#8d1430]/15 transition hover:bg-[#741027]"
+          >
+            <p className="text-sm font-semibold text-white">
+              Solicitar información
+              </p> 
+          </a>
         </nav>
 
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d7ccba] xl:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#ded3c6] text-[#514740] lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
-          aria-label="Abrir menú"
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {isOpen && (
-        <nav className="border-t border-[#ded5c6] bg-[#f8f4eb] px-5 py-5 xl:hidden">
-          {navigation.map((item) => (
+        <div className="border-t border-[#ded3c6] bg-[#f8f4ec] px-6 py-4 lg:hidden">
+          <nav className="mx-auto flex max-w-[1600px] flex-col gap-2">
             <a
-              key={item}
               href="#inicio"
-              className="block rounded-lg px-3 py-3 text-sm font-medium hover:bg-[#eee6d8]"
               onClick={() => setIsOpen(false)}
+              className="rounded-xl px-3 py-3 text-sm font-semibold text-[#514740] hover:bg-[#eee6db]"
             >
-              {item}
+              Plataforma
             </a>
-          ))}
-        </nav>
+
+            <a
+              href="#contacto"
+              onClick={() => setIsOpen(false)}
+              className="rounded-xl px-3 py-3 text-sm font-semibold text-[#514740] hover:bg-[#eee6db]"
+            >
+              Contacto
+            </a>
+          </nav>
+        </div>
       )}
     </header>
   );
