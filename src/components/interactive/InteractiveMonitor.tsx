@@ -15,12 +15,11 @@ import type {
 
 import BrochurePanel from "./BrochurePanel";
 import ModuleIndex from "./ModuleIndex";
-import MonitorNavigation from "./MonitorNavigation";
 import MonitorScreen from "./MonitorScreen";
 import OfficeScene from "./OfficeScene";
 
 function InteractiveMonitor() {
-  const [activeSection, setActiveSection] =
+  const [activeSection] =
     useState<SectionId>("inicio");
 
   const [activeModule, setActiveModule] =
@@ -41,18 +40,6 @@ function InteractiveMonitor() {
       ) ?? null,
     [activeModule],
   );
-
-  const handleSectionChange = (
-    sectionId: SectionId,
-  ) => {
-    setActiveSection(sectionId);
-
-    /*
-     * Cuando cambia una sección superior,
-     * volvemos al modo sección.
-     */
-    setActiveModule(null);
-  };
 
   const handleModuleChange = (
     moduleId: ModuleId,
