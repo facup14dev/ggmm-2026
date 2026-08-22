@@ -1,21 +1,27 @@
 export type SectionId =
   | "inicio"
+  | "nosotros"
   | "software"
-  | "beneficios"
   | "servicios"
-  | "calidad";
+  | "beneficios"
+  | "caracteristicas"
+  | "calidad"
+  | "areas"
+  | "comercial"
+  | "experiencia"
+  | "alianzas"
+  | "contacto";
 
-export type ModuleId =
-  | "directivos"
+export type AreaId =
   | "administracionTributaria"
   | "administracionFinanciera"
   | "administracionContable"
-  | "catastro"
-  | "accionSocial"
-  | "atencionVecino"
-  | "turismo"
+  | "administracionCatastral"
+  | "ayudasSociales"
+  | "autogestion"
+  | "administracionVehicular"
   | "rrhh"
-  | "rodados";
+  | "tribunalFaltas";
 
 export type Feature = {
   title: string;
@@ -26,38 +32,79 @@ export type Section = {
   id: SectionId;
   label: string;
   number?: string;
+
   title: string;
   eyebrow?: string;
   description: string;
+
+  image?: string;
+  imageAlt?: string;
+
   features?: Feature[];
+
   ctaLabel?: string;
+
+  /**
+   * Define qué opciones mostramos actualmente
+   * en la navegación principal del monitor.
+   */
+  primary?: boolean;
 };
 
-export type ModuleMetric = {
+export type AreaMetric = {
   value: string;
   label: string;
 };
 
-export type Module = {
-  id: ModuleId;
+export type GgmmArea = {
+  id: AreaId;
+
   label: string;
   title: string;
+
   shortDescription: string;
   description: string;
 
+  image?: string;
+  imageAlt?: string;
+  imagePosition?: string;
+
+  /**
+   * Nombres oficiales de los módulos
+   * informados en el brochure.
+   */
+  modules: string[];
+
+  /**
+   * Beneficios oficiales informados
+   * para el área.
+   */
+  benefits: string[];
+
+  /**
+   * Observaciones como:
+   * "Requiere dispositivos adicionales".
+   */
+  notes?: string[];
+
+  accentLabel?: string;
+  metric?: AreaMetric;
+
+  /*
+   * Alias temporales utilizados actualmente
+   * por MonitorScreen y BrochurePanel.
+   *
+   * Más adelante podemos renombrar esos
+   * componentes para hablar de "areas"
+   * en lugar de "modules".
+   */
   relatedSolutions?: string[];
   impacts?: string[];
-
-  /**
-   * Texto destacado visualmente en el folleto.
-   * Ejemplo:
-   * "Información para decidir"
-   */
-  accentLabel?: string;
-
-  /**
-   * Dato visual / conceptual del módulo.
-   * No necesariamente representa una estadística real.
-   */
-  metric?: ModuleMetric;
 };
+
+/*
+ * Compatibilidad temporal con los componentes
+ * que ya desarrollamos.
+ */
+export type ModuleId = AreaId;
+export type Module = GgmmArea;

@@ -3,452 +3,1102 @@ import type {
   Section,
 } from "../types/section";
 
-export const sections: Section[] = [
+/* =========================================================
+   SECCIONES INSTITUCIONALES
+   ========================================================= */
+
+export const allSections: Section[] = [
+  /* ---------------------------------------------------------
+     INICIO
+     --------------------------------------------------------- */
+
   {
     id: "inicio",
     label: "Inicio",
-    title: "Comience la transformación digital de su municipio",
+    primary: true,
+
+    title:
+      "Comience la transformación digital de su municipio",
+
     eyebrow:
-      "Plataforma integral modular para gobiernos municipales",
+      "Plataforma integral para Gobiernos Municipales",
+
     description:
-      "GGMM integra las áreas clave del municipio en una única plataforma para mejorar la recaudación, optimizar procesos internos y brindar mejores servicios al ciudadano.",
-    ctaLabel: "Ver módulos de integración",
+      "GGMM posibilita digitalizar las actividades habituales dentro de una misma plataforma, mejorando los procesos de gestión, la atención a los vecinos, la vinculación con proveedores y la recaudación municipal.",
+
+    ctaLabel: "Conocer áreas y módulos",
+  },
+
+  /* ---------------------------------------------------------
+     03 · SOBRE NOSOTROS
+     --------------------------------------------------------- */
+
+  {
+    id: "nosotros",
+    label: "Sobre nosotros",
+    number: "03",
+    primary: true,
+
+    title: "Sobre nosotros",
+
+    eyebrow:
+      "Experiencia, conocimiento e innovación",
+
+    description:
+      "Somos un equipo de especialistas en el sector digital con más de 20 años de experiencia implementando sistemas informáticos y asesorando a municipios de Latinoamérica. Desarrollamos GGMM para municipios que necesitan una transformación digital. Nuestro valor agregado está en ser los creadores del sistema, atender las necesidades particulares de cada cliente e invertir permanentemente en Investigación y Desarrollo.",
+
+    image:
+      "/images/brochure/sobre-nosotros.webp",
+
+    imageAlt:
+      "Profesional trabajando con tecnología",
+
     features: [
       {
-        title: "Información precisa",
+        title: "+20 años de experiencia",
         description:
-          "Contar con información precisa para tomar decisiones.",
+          "Experiencia implementando sistemas informáticos y asesorando a municipios de Latinoamérica.",
       },
       {
-        title: "Mayor recaudación",
+        title: "Creadores de GGMM",
         description:
-          "Incrementar la capacidad de gestión tributaria y la cobranza.",
+          "El equipo que brinda el servicio es también el creador y desarrollador de la plataforma.",
       },
       {
-        title: "Control del gasto",
+        title: "Atención personalizada",
         description:
-          "Controlar gastos, imputaciones y responsables.",
+          "Las necesidades particulares de cada cliente forman parte del proceso de evolución del sistema.",
       },
       {
-        title: "Más servicios digitales",
+        title: "Investigación y Desarrollo",
         description:
-          "Permitir pagos y gestiones por internet sin trasladar al contribuyente.",
+          "Estudio e inversión permanente en I+D para mantener y evolucionar la solución.",
       },
     ],
   },
+
+  /* ---------------------------------------------------------
+     04 · NUESTRO SOFTWARE
+     --------------------------------------------------------- */
+
   {
     id: "software",
     label: "Nuestro Software",
     number: "04",
+    primary: true,
+
     title: "Nuestro Software",
-    eyebrow: "Plataforma integral modular",
+
+    eyebrow:
+      "Una plataforma integral para la gestión municipal",
+
     description:
-      "Una solución integral, modular y escalable para administrar de forma centralizada los procesos críticos del gobierno municipal.",
+      "GGMM permite digitalizar las actividades habituales en una misma plataforma, ahorrar tiempo en las tareas, mejorar la atención a los vecinos, facilitar la vinculación con proveedores e incrementar la recaudación, contribuyendo además a mejorar la imagen del municipio.",
+
+    image:
+      "/images/brochure/nuestro-software.webp",
+
+    imageAlt:
+      "Profesional utilizando una computadora portátil",
+
     features: [
       {
-        title: "Digitalización integral",
+        title: "Parametrizable",
         description:
-          "Procesos municipales conectados dentro de una única plataforma.",
+          "Se adapta plenamente a la ordenanza vigente al momento de la implementación.",
       },
       {
         title: "Modular y escalable",
         description:
-          "Cada municipio puede incorporar módulos de acuerdo a sus necesidades.",
+          "Sistema integral que puede implementarse paulatinamente por cada área.",
+      },
+      {
+        title: "Transacciones seguras",
+        description:
+          "Verifica que las transacciones se completen de forma segura, evitando pérdidas de datos o errores.",
+      },
+      {
+        title:
+          "Vinculación con otros organismos",
+        description:
+          "Permite integraciones con organismos como bancos, Rentas provinciales y Registros del Automotor.",
+      },
+      {
+        title:
+          "Trazabilidad y procesos auditables",
+        description:
+          "Genera un registro de auditoría de los usuarios y de sus acciones, conservado históricamente.",
       },
       {
         title: "Arquitectura multicapa",
         description:
-          "Preparada para evolucionar y sostener crecimiento funcional.",
+          "Facilita el mantenimiento y la personalización del sistema.",
       },
       {
         title: "Licencia abierta",
         description:
-          "Pensada para brindar continuidad operativa y autonomía tecnológica.",
+          "El municipio puede poner en marcha los puestos y oficinas que necesite sin pagar licencias por cada puesto.",
       },
     ],
   },
-  {
-    id: "beneficios",
-    label: "Beneficios Municipales",
-    number: "07",
-    title: "Beneficios Municipales",
-    eyebrow: "Resultados concretos para la gestión",
-    description:
-      "GGMM aporta control, trazabilidad e información en tiempo real para fortalecer la gestión municipal y la relación con el contribuyente.",
-    features: [
-      {
-        title: "Aumentar recaudación",
-        description:
-          "Mejor gestión tributaria, cobranza y autogestión de contribuyentes.",
-      },
-      {
-        title: "Mejor información",
-        description:
-          "Datos consolidados para toma de decisiones por parte de directivos.",
-      },
-      {
-        title: "Control administrativo",
-        description:
-          "Orden en contabilidad, finanzas, imputaciones y responsables.",
-      },
-      {
-        title: "Servicios ciudadanos",
-        description:
-          "Más trámites, pagos y consultas online para reducir fricción.",
-      },
-    ],
-  },
+
+  /* ---------------------------------------------------------
+     05 · NUESTROS SERVICIOS
+     --------------------------------------------------------- */
+
   {
     id: "servicios",
-    label: "Servicios Integrales",
-    number: "08",
-    title: "Servicios Integrales",
-    eyebrow: "Herramientas complementarias",
+    label: "Nuestros Servicios",
+    number: "05",
+    primary: true,
+
+    title: "Nuestros Servicios",
+
+    eyebrow:
+      "Asesoramiento + Capacitación + Soporte + Puesta en Producción",
+
     description:
-      "Además del núcleo funcional, GGMM incorpora herramientas específicas que potencian la experiencia operativa y la atención al ciudadano.",
+      "La implementación de GGMM incluye servicios profesionales orientados a acompañar al municipio desde el relevamiento inicial y la capacitación hasta la puesta en producción, el soporte y la evolución posterior.",
+
+    image:
+      "/images/brochure/servicios.webp",
+
+    imageAlt:
+      "Profesionales trabajando con herramientas digitales",
+
     features: [
       {
-        title: "Autogestión de proveedores",
+        title: "Capacitación",
         description:
-          "Mejora la vinculación y el circuito administrativo con proveedores.",
+          "Se realiza según los perfiles de los usuarios, coordinada previamente con el municipio y disponible en modalidad virtual y/o presencial.",
       },
       {
-        title: "Autogestión de contribuyentes",
+        title:
+          "Provisión de herramientas adicionales",
         description:
-          "Canal digital para consultas, pagos y trámites.",
+          "Se entregan herramientas para diseñar reportes y documentos internos utilizando los datos de GGMM.",
       },
       {
-        title: "Cobranza electrónica múltiple entidad",
+        title:
+          "Relevamiento y análisis de circuitos administrativos",
         description:
-          "Amplía medios de pago y facilita la cobranza municipal.",
+          "Consultoría integral por área para detectar necesidades, criticidad, prioridades y oportunidades de mejora o reingeniería de procesos.",
       },
       {
-        title: "Multa digital / Estacionamiento digital",
+        title: "Atención al Municipio",
         description:
-          "Servicios específicos para control, fiscalización y atención.",
+          "Sistema de requerimientos REQ disponible las 24 horas, junto con Mesas de Ayuda en línea.",
+      },
+      {
+        title:
+          "Equipamiento mínimo y recomendado",
+        description:
+          "Asesoramiento para utilizar el equipamiento necesario sin realizar inversiones innecesarias en infraestructura.",
+      },
+      {
+        title: "Soporte permanente",
+        description:
+          "Soporte bajo contrato mensual que contempla atención de eventos y actualización de versiones.",
+      },
+      {
+        title: "Garantía escrita",
+        description:
+          "Cobertura de errores cuyo origen sea el sistema durante la implementación y posteriormente bajo contrato de mantenimiento.",
+      },
+      {
+        title:
+          "Provisión de manuales de usuario",
+        description:
+          "Manuales digitales de los módulos y ayudas específicas para los procesos más críticos.",
+      },
+      {
+        title: "Migración de datos",
+        description:
+          "Análisis de la información existente y elaboración de un proyecto para integrar los datos históricos en GGMM.",
+      },
+      {
+        title:
+          "Provisión de procedimientos fuente",
+        description:
+          "Se proporcionan procesos y capacitación avanzada para favorecer la independencia tecnológica del municipio.",
       },
     ],
   },
+
+  /* ---------------------------------------------------------
+     07 · BENEFICIOS
+     --------------------------------------------------------- */
+
+  {
+    id: "beneficios",
+    label: "Beneficios",
+    number: "07",
+    primary: true,
+
+    title: "Beneficios",
+
+    eyebrow:
+      "Beneficios para todo el ecosistema municipal",
+
+    description:
+      "La plataforma genera beneficios para el municipio, los contribuyentes, los ciudadanos y los proveedores, integrando procesos que tradicionalmente funcionan de forma separada.",
+
+    features: [
+      {
+        title: "Para el Municipio",
+        description:
+          "Digitalización homogénea, integración entre áreas, mejora del trabajo interno, atención más ágil, incremento de recaudación, mejores controles de deuda y automatización de compras, contabilidad, Tesorería y cuentas bancarias.",
+      },
+      {
+        title: "Para el Contribuyente",
+        description:
+          "Optimización de procesos y trámites, terminales de autoconsulta, múltiples gestiones en un mismo lugar y eliminación de tiempos de espera.",
+      },
+      {
+        title: "Para el Ciudadano",
+        description:
+          "Posibilidad de realizar trámites a distancia y pagar tasas y servicios mediante múltiples medios de pago.",
+      },
+      {
+        title: "Para Proveedores",
+        description:
+          "Carga y seguimiento de facturas, consulta e impresión de retenciones, consulta de deuda y comunicación con el área de Compras.",
+      },
+    ],
+  },
+
+  /* ---------------------------------------------------------
+     08 · CARACTERÍSTICAS DESTACADAS
+     --------------------------------------------------------- */
+
+  {
+    id: "caracteristicas",
+    label: "Características",
+    number: "08",
+
+    title: "Características destacadas",
+
+    description:
+      "GGMM incorpora herramientas técnicas y transversales que complementan las áreas principales de gestión.",
+
+    features: [
+      {
+        title: "Usuarios / Auditoría",
+        description:
+          "Administración de usuarios mediante perfiles y registro permanente de la actividad de cada usuario.",
+      },
+      {
+        title: "Requerimientos",
+        description:
+          "Canal formal entre el municipio y el proveedor de GGMM mediante pedidos identificados con un número de ticket.",
+      },
+      {
+        title:
+          "Administración de Formularios",
+        description:
+          "Editor de reportes para personalizar documentos y salidas de información del entorno GGMM.",
+      },
+      {
+        title:
+          "Inteligencia de datos para el municipio",
+        description:
+          "Información dinámica de la base de datos para analizar cobranza, tasas, períodos y sectores de la ciudad.",
+      },
+      {
+        title: "Carné",
+        description:
+          "Administración e impresión de credenciales para distintos usos municipales.",
+      },
+      {
+        title: "Mesa de Entradas",
+        description:
+          "Seguimiento de la documentación que circula dentro del ámbito municipal.",
+      },
+      {
+        title:
+          "Transparencia de Información",
+        description:
+          "Generación de información formal y oficial y posibilidad de publicarla ordenadamente en la web municipal.",
+      },
+      {
+        title: "Pasarela de pagos",
+        description:
+          "Permite cobrar mediante múltiples medios de pago sin necesidad de realizar un convenio individual con cada entidad.",
+      },
+      {
+        title: "Capacitación",
+        description:
+          "Puede combinar modalidad virtual y presencial según las necesidades del municipio.",
+      },
+    ],
+  },
+
+  /* ---------------------------------------------------------
+     09 · AVALES DE CALIDAD
+     --------------------------------------------------------- */
+
   {
     id: "calidad",
     label: "Calidad y Avales",
     number: "09",
-    title: "Avales y Calidad",
-    eyebrow: "Experiencia respaldada",
+
+    title: "Avales de Calidad",
+
     description:
-      "Una plataforma orientada a procesos municipales reales, diseñada para brindar continuidad, trazabilidad y capacidad de crecimiento.",
+      "GGMM forma parte de una empresa comprometida con la calidad, con certificaciones internacionales y participación en organizaciones del sector tecnológico.",
+
+    image:
+      "/images/brochure/calidad.webp",
+
+    imageAlt:
+      "Profesional trabajando en un entorno tecnológico",
+
     features: [
       {
-        title: "Experiencia municipal",
+        title: "ISO 9001:2015",
         description:
-          "Solución pensada específicamente para gobiernos locales.",
+          "Certificación internacional de calidad mantenida y perfeccionada de forma permanente.",
       },
       {
-        title: "Evolución continua",
+        title: "ISO IEC 90003:2004",
         description:
-          "Arquitectura preparada para incorporar nuevos módulos y servicios.",
+          "Certificación vinculada a los procesos de desarrollo de software.",
       },
       {
-        title: "Gestión centralizada",
+        title: "CESSI",
         description:
-          "Una base única de información para áreas interdependientes.",
+          "Pertenencia a la Cámara de la Industria Argentina del Software.",
       },
       {
-        title: "Visión integral",
+        title:
+          "Córdoba Technology Cluster",
         description:
-          "Combina gestión interna, tributaria y servicios digitales.",
+          "Participación en el ecosistema tecnológico de Córdoba.",
       },
     ],
+  },
+
+  /* ---------------------------------------------------------
+     10 · ÁREAS Y MÓDULOS
+     --------------------------------------------------------- */
+
+  {
+    id: "areas",
+    label: "Áreas y Módulos",
+    number: "10",
+    primary: true,
+
+    title:
+      "Áreas y Módulos de disponibilidad inmediata",
+
+    eyebrow:
+      "Una solución integral para las áreas municipales",
+
+    description:
+      "GGMM está compuesto por un conjunto de más de 17 áreas y más de 40 módulos destinados a prestar servicios en ámbitos municipales. Cada área cubre el 100% de las necesidades de procesamiento del área municipal correspondiente.",
+
+    image:
+      "/images/brochure/areas-overview.webp",
+
+    imageAlt:
+      "Equipo profesional trabajando con una computadora",
+  },
+
+  /* ---------------------------------------------------------
+     20 · ASPECTOS COMERCIALES Y GARANTÍAS
+     --------------------------------------------------------- */
+
+  {
+    id: "comercial",
+    label: "Aspectos Comerciales",
+    number: "20",
+
+    title:
+      "Aspectos comerciales y Garantías",
+
+    description:
+      "Los costos dependen de la cantidad de módulos adquiridos, la magnitud del municipio y la modalidad elegida para contratar los servicios.",
+
+    features: [
+      {
+        title:
+          "Compra de módulos con mantenimiento",
+        description:
+          "Opción recomendada que incluye actualizaciones y ajustes sobre los módulos instalados.",
+      },
+      {
+        title: "Contrato de alquiler",
+        description:
+          "Alternativa para municipios que no desean realizar inversión en equipamiento y prefieren contratar los servicios completos.",
+      },
+      {
+        title: "Contrato de leasing",
+        description:
+          "Compra del sistema con opción de compra luego de un período determinado.",
+      },
+      {
+        title: "Garantía",
+        description:
+          "Cobertura ante errores surgidos al ejecutar procesos de los módulos instalados.",
+      },
+      {
+        title: "REQ",
+        description:
+          "Sistema disponible las 24 horas para canalizar requerimientos.",
+      },
+      {
+        title: "Mesa de Ayuda",
+        description:
+          "Atención mediante especialistas de lunes a viernes.",
+      },
+    ],
+  },
+
+  /* ---------------------------------------------------------
+     21 · EXPERIENCIA EN LATINOAMÉRICA
+     --------------------------------------------------------- */
+
+  {
+    id: "experiencia",
+    label: "Experiencia",
+    number: "21",
+
+    title: "Experiencia en Latinoamérica",
+
+    description:
+      "GGMM cuenta con experiencia en distintos países de Latinoamérica. En algunos mercados el trabajo fue realizado mediante alianzas con empresas locales.",
+
+    features: [
+      {
+        title: "Argentina",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "México",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "República Dominicana",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Nicaragua",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "El Salvador",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Panamá",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Colombia",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Honduras",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Venezuela",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Perú",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Puerto Rico",
+        description: "Experiencia GGMM.",
+      },
+      {
+        title: "Chile",
+        description: "Experiencia GGMM.",
+      },
+    ],
+  },
+
+  /* ---------------------------------------------------------
+     22 · ALIANZAS INTERNACIONALES
+     --------------------------------------------------------- */
+
+  {
+    id: "alianzas",
+    label: "Alianzas",
+    number: "22",
+
+    title: "Alianzas internacionales",
+
+    description:
+      "En distintos países de Latinoamérica GGMM ha trabajado mediante alianzas con empresas locales.",
+  },
+
+  /* ---------------------------------------------------------
+     23 · CONTACTO
+     --------------------------------------------------------- */
+
+  {
+    id: "contacto",
+    label: "Contacto",
+    number: "23",
+
+    title: "Contacto",
+
+    description:
+      "INFT S.A. · Padre D. Viera 219 · Alta Gracia, CP 5186 · Tel. (+54) 3547 432961 · 0810-888-0170.",
   },
 ];
 
-export const modules: Module[] = [
-  {
-    id: "directivos",
-    label: "Directivos",
-    title: "Directivos",
-    shortDescription:
-      "Información precisa para la toma de decisiones.",
-    description:
-      "Brinda a los responsables de gestión una visión integral del municipio mediante información consolidada, indicadores y reportes para la toma de decisiones.",
+/*
+ * Secciones visibles actualmente en la navegación
+ * superior del monitor.
+ *
+ * Las restantes quedan cargadas en allSections
+ * para incorporarlas posteriormente sin tener que
+ * reestructurar los datos.
+ */
+export const sections: Section[] =
+  allSections.filter(
+    (section) => section.primary,
+  );
 
-    accentLabel: "Información para decidir",
+/* =========================================================
+   ÁREAS GGMM DE DISPONIBILIDAD INMEDIATA
+   ========================================================= */
 
-    metric: {
-      value: "360°",
-      label: "Visión integral de la gestión municipal",
-    },
-
-    relatedSolutions: [
-      "Reportes inteligentes (BI)",
-      "Información centralizada",
-      "Trazabilidad de procesos",
-    ],
-
-    impacts: [
-      "Contar con información precisa para tomar decisiones",
-      "Mayor control y seguimiento de la gestión",
-    ],
-  },
+export const areas: Module[] = [
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN TRIBUTARIA
+     --------------------------------------------------------- */
 
   {
     id: "administracionTributaria",
+
     label: "Adm. Tributaria",
     title: "Administración Tributaria",
-    shortDescription:
-      "Recaudación, contribuyentes y gestión tributaria.",
-    description:
-      "Centraliza la gestión tributaria municipal, mejora la recaudación y facilita la administración de tasas, contribuyentes y circuitos de cobranza.",
 
-    accentLabel: "Potenciar la recaudación",
+    shortDescription:
+      "Rentas, cobranza, deuda y fiscalización.",
+
+    description:
+      "Área orientada a la administración tributaria municipal mediante módulos de Rentas, Cajeros, Planes, Cajeros externos, Notificaciones de deuda y Procuración / Apremio.",
+
+    modules: [
+      "Rentas",
+      "Cajeros",
+      "Planes",
+      "Cajeros externos",
+      "Notificaciones de deuda",
+      "Procuración / Apremio",
+    ],
+
+    benefits: [
+      "Incremento de recaudación.",
+      "Estacionamiento medido con compra anticipada de tiempo, control en tiempo real, seguimiento de inspectores y geolocalización.",
+      "Actas de infracción aplicables a las áreas municipales, con emisión de comprobantes y vinculación con Tribunal de Faltas.",
+      "GEO FISCO para brindar información del contribuyente en tiempo real a los fiscalizadores.",
+    ],
+
+    accentLabel:
+      "Incremento de recaudación",
 
     metric: {
       value: "+",
-      label: "Más herramientas para gestionar ingresos municipales",
+      label:
+        "Fortalecimiento de la gestión tributaria",
     },
 
     relatedSolutions: [
-      "Autogestión de contribuyentes",
-      "Cobranza electrónica múltiple entidad",
-      "Multa digital",
+      "Rentas",
+      "Cajeros",
+      "Planes",
+      "Cajeros externos",
+      "Notificaciones de deuda",
+      "Procuración / Apremio",
     ],
 
     impacts: [
-      "Aumentar la recaudación municipal",
-      "Mejorar la atención y autogestión del contribuyente",
-      "Ampliar canales y alternativas de cobranza",
+      "Incrementar la recaudación.",
+      "Mejorar la fiscalización.",
+      "Fortalecer los procesos de cobranza y deuda.",
     ],
   },
+
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN FINANCIERA
+     --------------------------------------------------------- */
 
   {
     id: "administracionFinanciera",
+
     label: "Adm. Financiera",
     title: "Administración Financiera",
-    shortDescription:
-      "Control de gastos, presupuesto y responsables.",
-    description:
-      "Permite controlar presupuestos, gastos, responsables y circuitos financieros del municipio con mayor visibilidad, trazabilidad y orden administrativo.",
 
-    accentLabel: "Control financiero",
+    shortDescription:
+      "Tesorería, bancos, compras y patrimonio.",
+
+    description:
+      "Área compuesta por módulos para la administración de Tesorería, Caja chica, Fondo fijo, Bancos, Compras y Patrimonio.",
+
+    image:
+      "/images/brochure/administracion-financiera.webp",
+
+    imageAlt:
+      "Profesional trabajando sobre una computadora portátil",
+
+    modules: [
+      "Tesorería",
+      "Caja chica",
+      "Fondo fijo",
+      "Bancos",
+      "Compras",
+      "Patrimonio",
+    ],
+
+    benefits: [
+      "Reducción del gasto.",
+      "Control de los proveedores y de las finanzas del municipio.",
+    ],
+
+    accentLabel:
+      "Control de las finanzas",
 
     metric: {
-      value: "360°",
-      label: "Seguimiento integral de gastos y responsables",
+      value: "Control",
+      label:
+        "Proveedores y finanzas del municipio",
     },
 
     relatedSolutions: [
-      "Autogestión de proveedores",
-      "Control presupuestario",
-      "Seguimiento financiero",
+      "Tesorería",
+      "Caja chica",
+      "Fondo fijo",
+      "Bancos",
+      "Compras",
+      "Patrimonio",
     ],
 
     impacts: [
-      "Controlar los gastos y sus responsables",
-      "Fortalecer el seguimiento presupuestario",
-      "Mejorar la trazabilidad de los movimientos financieros",
+      "Reducir el gasto.",
+      "Controlar proveedores.",
+      "Controlar las finanzas municipales.",
     ],
   },
+
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN CONTABLE
+     --------------------------------------------------------- */
 
   {
     id: "administracionContable",
+
     label: "Adm. Contable",
     title: "Administración Contable",
-    shortDescription:
-      "Imputaciones, registración y contabilidad al día.",
-    description:
-      "Ordena la contabilidad municipal, permite controlar imputaciones y mantener actualizada la registración contable con mayor consistencia e integración.",
 
-    accentLabel: "Contabilidad integrada",
+    shortDescription:
+      "Contabilidad presupuestaria y partida doble.",
+
+    description:
+      "Área integrada por los módulos de Contabilidad presupuestaria y Contabilidad partida doble.",
+
+    image:
+      "/images/brochure/administracion-contable.webp",
+
+    imageAlt:
+      "Manos trabajando sobre una computadora portátil",
+
+    modules: [
+      "Contabilidad presupuestaria",
+      "Contabilidad partida doble",
+    ],
+
+    benefits: [
+      "Poseer la contabilidad al día.",
+      "Efectuar las presentaciones en tiempo y forma del gasto.",
+    ],
+
+    accentLabel:
+      "Contabilidad al día",
 
     metric: {
-      value: "1",
-      label: "Circuito centralizado para información contable",
+      value: "Al día",
+      label:
+        "Información contable municipal",
     },
 
     relatedSolutions: [
-      "Integración contable",
-      "Imputaciones automáticas",
-      "Control de movimientos",
+      "Contabilidad presupuestaria",
+      "Contabilidad partida doble",
     ],
 
     impacts: [
-      "Controlar imputaciones y mantener la contabilidad al día",
-      "Reducir inconsistencias entre áreas",
-      "Centralizar la registración de movimientos",
+      "Mantener la contabilidad al día.",
+      "Realizar las presentaciones del gasto en tiempo y forma.",
     ],
   },
 
-  {
-    id: "catastro",
-    label: "Catastro",
-    title: "Catastro",
-    shortDescription:
-      "Información territorial y padrón integrado.",
-    description:
-      "Integra información territorial, padrón y datos parcelarios para fortalecer la gestión del territorio y mejorar la calidad de la base tributaria.",
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN CATASTRAL
+     --------------------------------------------------------- */
 
-    accentLabel: "Territorio conectado",
+  {
+    id: "administracionCatastral",
+
+    label: "Catastro",
+    title: "Administración Catastral",
+
+    shortDescription:
+      "Catastro, relevamiento fotométrico y GIS.",
+
+    description:
+      "Área conformada por Administración de Catastro, Relevamiento fotométrico y Catastro GIS.",
+
+    image:
+      "/images/brochure/administracion-catastral.webp",
+
+    imageAlt:
+      "Vista aérea urbana utilizada para representar la Administración Catastral",
+
+    modules: [
+      "Administración de catastro",
+      "Relevamiento fotométrico",
+      "Catastro GIS",
+    ],
+
+    benefits: [
+      "Planchetas catastrales actualizadas.",
+      "Control de la obra privada.",
+      "Incremento de recaudación.",
+      "Detección de obras catastrales.",
+    ],
+
+    notes: [
+      "Catastro GIS requiere dispositivos adicionales.",
+    ],
+
+    accentLabel:
+      "Información catastral actualizada",
 
     metric: {
       value: "GIS",
-      label: "Información geográfica integrada a la gestión",
+      label:
+        "Módulo disponible con dispositivos adicionales",
     },
 
     relatedSolutions: [
+      "Administración de catastro",
+      "Relevamiento fotométrico",
       "Catastro GIS",
-      "Integración con obras privadas",
-      "Integración con catastro provincial",
     ],
 
     impacts: [
-      "Integrar obras privadas y catastro provincial con la gestión tributaria",
-      "Actualizar y consolidar información territorial",
-      "Fortalecer la base para control y recaudación",
+      "Actualizar las planchetas catastrales.",
+      "Controlar la obra privada.",
+      "Incrementar la recaudación.",
+      "Detectar obras catastrales.",
     ],
   },
 
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN DE AYUDAS SOCIALES
+     --------------------------------------------------------- */
+
   {
-    id: "accionSocial",
-    label: "Acción Social",
-    title: "Acción Social",
+    id: "ayudasSociales",
+
+    label: "Ayudas Sociales",
+    title:
+      "Administración de Ayudas Sociales",
+
     shortDescription:
-      "Beneficios, subsidios y padrón unificado.",
+      "Asistencia social y prestaciones.",
+
     description:
-      "Gestiona beneficios y subsidios integrando una única base de datos para mejorar el seguimiento, la administración y el control de políticas sociales.",
+      "Área integrada por Administración de la asistencia social y Prestaciones destacables.",
 
-    accentLabel: "Padrón social unificado",
+    image:
+      "/images/brochure/ayudas-sociales.webp",
 
-    metric: {
-      value: "1",
-      label: "Base central para beneficios y subsidios",
-    },
+    imageAlt:
+      "Productos utilizados para representar asistencia social",
+
+    modules: [
+      "Administración de la asistencia social",
+      "Prestaciones destacables",
+    ],
+
+    benefits: [
+      "Detección de necesidades de los ciudadanos.",
+      "Atención y respuesta en tiempo y forma.",
+    ],
+
+    accentLabel:
+      "Atención y respuesta",
 
     relatedSolutions: [
-      "Base única de padrón",
-      "Seguimiento de beneficiarios",
-      "Gestión de subsidios",
+      "Administración de la asistencia social",
+      "Prestaciones destacables",
     ],
 
     impacts: [
-      "Gestionar beneficios y subsidios desde una única base de datos",
-      "Mejorar el seguimiento de beneficiarios",
-      "Reducir duplicidades e inconsistencias",
+      "Detectar necesidades de los ciudadanos.",
+      "Atender y responder en tiempo y forma.",
     ],
   },
 
-  {
-    id: "atencionVecino",
-    label: "At. al Vecino",
-    title: "Atención al Vecino",
-    shortDescription:
-      "Mejor vinculación y servicios al ciudadano.",
-    description:
-      "Centraliza la atención al ciudadano y mejora la experiencia de los vecinos a través de canales más ágiles, servicios digitales y una gestión más ordenada.",
+  /* ---------------------------------------------------------
+     AUTOGESTIÓN
+     --------------------------------------------------------- */
 
-    accentLabel: "Municipio más cerca",
+  {
+    id: "autogestion",
+
+    label: "Autogestión",
+    title:
+      "Plataforma de Autogestión y Pagos Electrónicos",
+
+    shortDescription:
+      "Servicios y trámites municipales online.",
+
+    description:
+      "Área compuesta por Autogestión de contribuyentes, Autogestión de trámites y Autogestión de proveedores.",
+
+    image:
+      "/images/brochure/autogestion.webp",
+
+    imageAlt:
+      "Puesto de trabajo representando servicios digitales de autogestión",
+
+    modules: [
+      "Autogestión de contribuyentes",
+      "Autogestión de trámites",
+      "Autogestión de proveedores",
+    ],
+
+    benefits: [
+      "Brindar los servicios del municipio las 24 horas, todos los días.",
+      "Evitar concurrencia física y sus demoras de atención.",
+      "Incrementar recaudación y mejorar la imagen del municipio.",
+    ],
+
+    accentLabel:
+      "Servicios municipales disponibles online",
 
     metric: {
-      value: "Online",
-      label: "Gestiones y servicios sin traslado innecesario",
+      value: "24/7",
+      label:
+        "Servicios del municipio todos los días",
     },
 
     relatedSolutions: [
       "Autogestión de contribuyentes",
-      "Pagos y gestiones online",
-      "Canales de atención",
+      "Autogestión de trámites",
+      "Autogestión de proveedores",
     ],
 
     impacts: [
-      "Permitir pagos y gestiones por internet",
-      "Reducir traslados del contribuyente a la municipalidad",
-      "Mejorar la experiencia de atención al ciudadano",
+      "Brindar servicios municipales las 24 horas.",
+      "Reducir la concurrencia física.",
+      "Incrementar la recaudación.",
+      "Mejorar la imagen del municipio.",
     ],
   },
 
-  {
-    id: "turismo",
-    label: "Turismo",
-    title: "Turismo",
-    shortDescription:
-      "Información y servicios para visitantes.",
-    description:
-      "Ofrece servicios e información útil a visitantes y fortalece la gestión municipal del área turística mediante herramientas digitales específicas.",
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN VEHICULAR
+     --------------------------------------------------------- */
 
-    accentLabel: "Información para visitantes",
+  {
+    id: "administracionVehicular",
+
+    label: "Vehicular",
+    title: "Administración Vehicular",
+
+    shortDescription:
+      "Taller, flota, documentación, neumáticos y combustible.",
+
+    description:
+      "Área destinada a la administración del taller y la flota, la documentación vehicular y del personal, los neumáticos y el combustible.",
+
+    image:
+      "/images/brochure/administracion-vehicular.webp",
+
+    imageAlt:
+      "Flota vehicular utilizada para representar Administración Vehicular",
+
+    modules: [
+      "Administración de taller y flota",
+      "Documentación vehicular / personal",
+      "Control de neumáticos",
+      "Control de combustible",
+    ],
+
+    benefits: [
+      "Economía en combustible, repuestos y mano de obra.",
+      "Operatividad de la flota al 100%.",
+    ],
+
+    accentLabel:
+      "Operatividad de la flota",
 
     metric: {
-      value: "24/7",
-      label: "Acceso digital a información y servicios turísticos",
+      value: "100%",
+      label:
+        "Operatividad de la flota",
     },
 
     relatedSolutions: [
-      "Información para visitantes",
-      "Servicios digitales",
-      "Canales de consulta",
+      "Administración de taller y flota",
+      "Documentación vehicular / personal",
+      "Control de neumáticos",
+      "Control de combustible",
     ],
 
     impacts: [
-      "Ofrecer servicios e información a los visitantes de la ciudad",
-      "Facilitar el acceso a información turística",
-      "Fortalecer la presencia digital del municipio",
+      "Economizar combustible, repuestos y mano de obra.",
+      "Mantener la operatividad de la flota.",
     ],
   },
+
+  /* ---------------------------------------------------------
+     ADMINISTRACIÓN DE RRHH
+     --------------------------------------------------------- */
 
   {
     id: "rrhh",
+
     label: "RRHH",
-    title: "Recursos Humanos",
+    title: "Administración de RRHH",
+
     shortDescription:
-      "Novedades, haberes y administración de personal.",
+      "Personal, novedades, asistencia y liquidación.",
+
     description:
-      "Gestiona recursos humanos, novedades y liquidación de haberes para sostener una administración más ordenada, centralizada y confiable de la nómina municipal.",
+      "Área compuesta por Registro de novedades, control Biométrico o manual, Administración de personal y Liquidación.",
 
-    accentLabel: "Gestión integral del personal",
+    image:
+      "/images/brochure/rrhh.webp",
 
-    metric: {
-      value: "1",
-      label: "Legajo y novedades dentro de una misma gestión",
-    },
+    imageAlt:
+      "Profesional trabajando con una computadora portátil",
+
+    modules: [
+      "Registro de novedades",
+      "Biométricos o manual",
+      "Administración de personal",
+      "Liquidación",
+    ],
+
+    benefits: [
+      "Nómina de personal de planta y contratados al día, liquidaciones correctas, control de asistencia y novedades.",
+      "Economía en los gastos.",
+    ],
+
+    notes: [
+      "Registro de novedades requiere dispositivos adicionales.",
+    ],
+
+    accentLabel:
+      "Administración del personal",
 
     relatedSolutions: [
-      "Gestión de novedades",
-      "Liquidación de haberes",
-      "Administración de legajos",
+      "Registro de novedades",
+      "Biométricos o manual",
+      "Administración de personal",
+      "Liquidación",
     ],
 
     impacts: [
-      "Controlar las novedades del personal",
-      "Liquidar los haberes de la nómina",
-      "Centralizar información laboral y administrativa",
+      "Mantener la nómina al día.",
+      "Realizar liquidaciones correctas.",
+      "Controlar asistencia y novedades.",
+      "Generar economía en los gastos.",
     ],
   },
 
-  {
-    id: "rodados",
-    label: "Rodados",
-    title: "Rodados",
-    shortDescription:
-      "Gestión profesional de vehículos y maquinaria.",
-    description:
-      "Permite administrar de manera profesional vehículos, maquinaria y recursos móviles del municipio, mejorando el control, seguimiento y disponibilidad de los activos.",
+  /* ---------------------------------------------------------
+     TRIBUNAL DE FALTAS
+     --------------------------------------------------------- */
 
-    accentLabel: "Control de activos móviles",
+  {
+    id: "tribunalFaltas",
+
+    label: "Tribunal",
+    title:
+      "Administración de Tribunal de Faltas",
+
+    shortDescription:
+      "Actas, cajeros y vinculación con Rentas.",
+
+    description:
+      "Área integrada por Administración de actas, Cajeros y Vinculación con Rentas.",
+
+    image:
+      "/images/brochure/tribunal-faltas.webp",
+
+    imageAlt:
+      "Funcionario trabajando frente a una computadora",
+
+    modules: [
+      "Administración de actas",
+      "Cajeros",
+      "Vinculación con Rentas",
+    ],
+
+    benefits: [
+      "Gestión eficiente de infracciones y contravenciones.",
+      "Educación cívica del ciudadano.",
+      "Incremento de la recaudación.",
+    ],
+
+    accentLabel:
+      "Gestión eficiente de infracciones",
 
     metric: {
-      value: "360°",
-      label: "Seguimiento integral de vehículos y maquinaria",
+      value: "+",
+      label:
+        "Incremento de la recaudación",
     },
 
     relatedSolutions: [
-      "Gestión de flota",
-      "Control operativo",
-      "Seguimiento de activos",
+      "Administración de actas",
+      "Cajeros",
+      "Vinculación con Rentas",
     ],
 
     impacts: [
-      "Gestionar de manera profesional vehículos y maquinaria",
-      "Mejorar el control y disponibilidad de los activos",
-      "Centralizar información operativa de la flota municipal",
+      "Gestionar eficientemente infracciones y contravenciones.",
+      "Favorecer la educación cívica del ciudadano.",
+      "Incrementar la recaudación.",
     ],
   },
 ];
+
+/*
+ * Alias temporal.
+ *
+ * Los componentes actuales todavía utilizan
+ * los nombres Module / modules aunque conceptualmente
+ * ahora estamos navegando Áreas GGMM.
+ *
+ * Así no necesitamos reescribir todavía:
+ *
+ * - ModuleIndex
+ * - MonitorScreen
+ * - BrochurePanel
+ * - InteractiveMonitor
+ */
+export const moreSections: Section[] =
+  allSections.filter((section) =>
+    [
+      "caracteristicas",
+      "calidad",
+      "comercial",
+      "experiencia",
+      "alianzas",
+    ].includes(section.id),
+  );
+  
+export const modules = areas;

@@ -7,18 +7,41 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#ded3c6] bg-[#f8f4ec]/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 lg:px-10">
+          
         <a
           href="#inicio"
           className="flex items-center gap-4"
           aria-label="Ir al inicio"
         >
-          <span className="font-serif text-4xl font-black tracking-[-0.07em] text-[#b62037]">
-            ggmm
-          </span>
+          <img
+            src="/images/ggmmLogo.png"
+            alt="GGMM"
+            className="h-[45px] w-auto object-contain"
+          />
 
-          <span className="hidden text-[10px] font-bold uppercase tracking-[0.18em] text-[#857970] sm:block">
-            Gestión Gubernamental Municipal
-          </span>
+          <div className="hidden items-start sm:flex">
+            <span className="mt-[1px] text-[7px] leading-none text-[#8d1430]">
+              ®
+            </span>
+
+            <div className="text-[10px] font-bold uppercase leading-[1.08] tracking-[0.01em] text-[#681027]">
+              <span className="block">
+                Digitalización
+              </span>
+
+              <span className="block">
+                integral para
+              </span>
+
+              <span className="block">
+                gobiernos
+              </span>
+
+              <span className="block">
+                municipales
+              </span>
+            </div>
+          </div>
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
