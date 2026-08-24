@@ -212,7 +212,7 @@ function Contact() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden bg-[#f5f0e8] py-20 sm:py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-[#fff8f5] px-5 py-12 lg:bg-[#f5f0e8] lg:px-0 lg:py-20 xl:py-24"
     >
       {/* Decoración */}
       <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-[#8d1430]/5 blur-3xl" />
@@ -220,7 +220,7 @@ function Contact() {
       <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-[#8d1430]/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <div className="grid items-start gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* IZQUIERDA */}
           <div className="lg:sticky lg:top-10">
             <div className="flex items-center gap-3">
@@ -262,7 +262,7 @@ function Contact() {
               />
             </div>
 
-            <div className="mt-10 rounded-3xl border border-[#ded3c3] bg-white/65 p-6 shadow-sm">
+            <div className="mt-10 hidden rounded-3xl border border-[#ded3c3] bg-white/65 p-6 shadow-sm lg:block">
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8d1430]">
                 Plataforma GGMM
               </p>
