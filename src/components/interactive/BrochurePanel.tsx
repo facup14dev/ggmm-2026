@@ -37,7 +37,172 @@ function BrochurePanel({
     );
   }
 
+  function HomeBrochure({
+    section,
+  }: {
+    section: Section;
+  }) {
+    return (
+      <BrochureShell>
+        {/* =====================================
+            CABECERA
+        ====================================== */}
+
+        <div className="shrink-0 px-6 pb-5 pt-6">
+          <p className="text-[9px] font-black uppercase tracking-[0.22em] text-[#8d1430]">
+            GGMM
+          </p>
+
+          <h2 className="mt-2 font-serif text-[1.9rem] font-black uppercase leading-[1.02] text-[#211a18]">
+            Comience la transformación
+            digital de su municipio
+          </h2>
+
+          <p className="mt-4 text-[10px] leading-5 text-[#655a52] 2xl:text-[11px]">
+            {section.description}
+          </p>
+        </div>
+
+        {/* =====================================
+            MÉTRICAS
+        ====================================== */}
+
+        <div className="px-6">
+          <div className="grid grid-cols-3 gap-2">
+            <div className="rounded-xl bg-[#681027] px-3 py-4 text-white">
+              <p className="font-serif text-2xl font-black leading-none">
+                +20
+              </p>
+
+              <p className="mt-2 text-[7px] font-bold uppercase leading-3 tracking-[0.14em] text-white/55">
+                Años de
+                <br />
+                experiencia
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-[#8d1430] px-3 py-4 text-white">
+              <p className="font-serif text-2xl font-black leading-none">
+                +17
+              </p>
+
+              <p className="mt-2 text-[7px] font-bold uppercase leading-3 tracking-[0.14em] text-white/55">
+                Áreas
+                <br />
+                disponibles
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-[#a51f37] px-3 py-4 text-white">
+              <p className="font-serif text-2xl font-black leading-none">
+                +40
+              </p>
+
+              <p className="mt-2 text-[7px] font-bold uppercase leading-3 tracking-[0.14em] text-white/55">
+                Módulos
+                <br />
+                GGMM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* =====================================
+            CONTENIDO
+        ====================================== */}
+
+        <div className="ggmm-scrollbar min-h-0 flex-1 overflow-y-auto px-6 pb-6 pt-5">
+          <div className="rounded-2xl border border-[#ddd0c1] bg-white/65 p-5">
+            <SectionLabel>
+              Una plataforma integral
+            </SectionLabel>
+
+            <div className="mt-4 space-y-4">
+              <HomeBenefit
+                title="Gestión integrada"
+                description="Las principales áreas municipales trabajan dentro de un mismo ecosistema tecnológico."
+              />
+
+              <HomeBenefit
+                title="Transformación digital"
+                description="Digitaliza procesos y simplifica la administración cotidiana del municipio."
+              />
+
+              <HomeBenefit
+                title="Modular y escalable"
+                description="Permite incorporar progresivamente las áreas y módulos que cada municipio necesita."
+              />
+            </div>
+          </div>
+
+          {/* BLOQUE FINAL */}
+
+          <div className="mt-4 rounded-2xl bg-[#ebe3d8] p-4">
+            <div className="flex items-start gap-3">
+              <Sparkles
+                size={18}
+                className="mt-0.5 shrink-0 text-[#a51f37]"
+              />
+
+              <div>
+                <p className="text-[9px] font-black text-[#302824]">
+                  Tecnología aplicada a la gestión municipal
+                </p>
+
+                <p className="mt-1 text-[8px] leading-4 text-[#74685f]">
+                  Información, administración, recaudación,
+                  territorio y atención al ciudadano dentro
+                  de una misma plataforma.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <BrochureFooter />
+      </BrochureShell>
+    );
+  }
+
+  function HomeBenefit({
+    title,
+    description,
+  }: {
+    title: string;
+    description: string;
+  }) {
+    return (
+      <div className="flex items-start gap-3">
+        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#f1e7e2]">
+          <BadgeCheck
+            size={14}
+            className="text-[#a51f37]"
+          />
+        </div>
+
+        <div>
+          <p className="text-[9px] font-black text-[#302824] 2xl:text-[10px]">
+            {title}
+          </p>
+
+          <p className="mt-1 text-[8px] leading-4 text-[#74685f] 2xl:text-[9px]">
+            {description}
+          </p>
+        </div>
+      </div>
+    );
+  }
+  
+
   switch (section.id) {
+
+    case "inicio":
+    return (
+      <HomeBrochure
+        section={section}
+      />
+    );
+
     case "areas":
       return (
         <AreasBrochure
