@@ -286,10 +286,10 @@ function AreaBrochure({
       {/* CONTENIDO */}
 
       <div className="ggmm-scrollbar min-h-0 flex-1 overflow-y-auto">
-        <div className="px-6 pb-5 pt-5">
-          <p className="text-[12px] leading-6 text-[#655a52] 2xl:text-[13px]">
+        <div className="px-6 pb-6 pt-1">
+          {/* <p className="text-[12px] leading-6 text-[#655a52] 2xl:text-[13px]">
             {area.description}
-          </p>
+          </p> */}
 
           {area.accentLabel && (
             <div className="mt-5 grid grid-cols-[1fr_auto] items-center gap-4 rounded-xl bg-[#681027] px-4 py-4 text-white">
