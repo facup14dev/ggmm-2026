@@ -268,19 +268,19 @@ function AreaBrochure({
 
       {/* NOMBRE */}
 
-      <div className="shrink-0 bg-[#681027] px-6 py-5 text-white">
-        <p className="text-[8px] font-black uppercase tracking-[0.2em] text-white/50">
-          Área GGMM
-        </p>
-
+      {/* <div className="shrink-0 bg-[#681027] px-6 py-5 text-white">
+        <p className="text-[8px] font-black tracking-[0.2em] text-white/50">
+          ggmm
+        </p> */}
+{/* 
         <h2 className="mt-2 font-serif text-[1.6rem] font-black leading-tight">
           {area.title}
-        </h2>
+        </h2> */}
 
-        <p className="mt-2 text-[9px] leading-4 text-white/65">
+        {/* <p className="mt-2 text-[9px] leading-4 text-white/65">
           {area.shortDescription}
-        </p>
-      </div>
+        </p> */}
+      {/* </div> */}
 
 
       {/* CONTENIDO */}
