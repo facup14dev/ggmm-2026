@@ -43,7 +43,7 @@ function MobileInstitutionalSections({
     >
       <div>
         <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#801628]">
-          Conocé GGMM
+          Conocé ggmm
         </p>
 
         <h2 className="mt-2 text-[26px] font-bold tracking-[-0.02em] text-[#1f1b19]">
@@ -84,7 +84,7 @@ function MobileInstitutionalSections({
                   <div className="min-w-0">
                     {section.number && (
                       <p className="text-[9px] font-black uppercase tracking-[0.18em] text-[#801628]">
-                        {section.number} · GGMM
+                        {section.number} · ggmm
                       </p>
                     )}
 

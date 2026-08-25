@@ -24,7 +24,7 @@ export const allSections: Section[] = [
       "Plataforma integral para Gobiernos Municipales",
 
     description:
-      "GGMM posibilita digitalizar las actividades habituales dentro de una misma plataforma, mejorando los procesos de gestión, la atención a los vecinos, la vinculación con proveedores y la recaudación municipal.",
+      "ggmm posibilita digitalizar las actividades habituales dentro de una misma plataforma, mejorando los procesos de gestión, la atención a los vecinos, la vinculación con proveedores y la recaudación municipal.",
 
     ctaLabel: "Conocer áreas y módulos",
   },
@@ -45,7 +45,7 @@ export const allSections: Section[] = [
       "Experiencia, conocimiento e innovación",
 
     description:
-      "Somos un equipo de especialistas en el sector digital con más de 20 años de experiencia implementando sistemas informáticos y asesorando a municipios de Latinoamérica. Desarrollamos GGMM para municipios que necesitan una transformación digital. Nuestro valor agregado está en ser los creadores del sistema, atender las necesidades particulares de cada cliente e invertir permanentemente en Investigación y Desarrollo.",
+      "Somos un equipo de especialistas en el sector digital con más de 20 años de experiencia implementando sistemas informáticos y asesorando a municipios de Latinoamérica. Desarrollamos ggmm para municipios que necesitan una transformación digital. Nuestro valor agregado está en ser los creadores del sistema, atender las necesidades particulares de cada cliente e invertir permanentemente en Investigación y Desarrollo.",
 
     image:
       "/images/brochure/sobre-nosotros.webp",
@@ -60,7 +60,7 @@ export const allSections: Section[] = [
           "Experiencia implementando sistemas informáticos y asesorando a municipios de Latinoamérica.",
       },
       {
-        title: "Creadores de GGMM",
+        title: "Creadores de ggmm",
         description:
           "El equipo que brinda el servicio es también el creador y desarrollador de la plataforma.",
       },
@@ -93,7 +93,7 @@ export const allSections: Section[] = [
       "Una plataforma integral para la gestión municipal",
 
     description:
-      "GGMM permite digitalizar las actividades habituales en una misma plataforma, ahorrar tiempo en las tareas, mejorar la atención a los vecinos, facilitar la vinculación con proveedores e incrementar la recaudación, contribuyendo además a mejorar la imagen del municipio.",
+      "ggmm permite digitalizar las actividades habituales en una misma plataforma, ahorrar tiempo en las tareas, mejorar la atención a los vecinos, facilitar la vinculación con proveedores e incrementar la recaudación, contribuyendo además a mejorar la imagen del municipio.",
 
     image:
       "/images/brochure/nuestro-software.webp",
@@ -158,7 +158,7 @@ export const allSections: Section[] = [
       "Asesoramiento + Capacitación + Soporte + Puesta en Producción",
 
     description:
-      "La implementación de GGMM incluye servicios profesionales orientados a acompañar al municipio desde el relevamiento inicial y la capacitación hasta la puesta en producción, el soporte y la evolución posterior.",
+      "La implementación de ggmm incluye servicios profesionales orientados a acompañar al municipio desde el relevamiento inicial y la capacitación hasta la puesta en producción, el soporte y la evolución posterior.",
 
     image:
       "/images/brochure/servicios.webp",
@@ -176,7 +176,7 @@ export const allSections: Section[] = [
         title:
           "Provisión de herramientas adicionales",
         description:
-          "Se entregan herramientas para diseñar reportes y documentos internos utilizando los datos de GGMM.",
+          "Se entregan herramientas para diseñar reportes y documentos internos utilizando los datos de ggmm.",
       },
       {
         title:
@@ -214,7 +214,7 @@ export const allSections: Section[] = [
       {
         title: "Migración de datos",
         description:
-          "Análisis de la información existente y elaboración de un proyecto para integrar los datos históricos en GGMM.",
+          "Análisis de la información existente y elaboración de un proyecto para integrar los datos históricos en ggmm.",
       },
       {
         title:
@@ -279,7 +279,7 @@ export const allSections: Section[] = [
     title: "Características destacadas",
 
     description:
-      "GGMM incorpora herramientas técnicas y transversales que complementan las áreas principales de gestión.",
+      "ggmm incorpora herramientas técnicas y transversales que complementan las áreas principales de gestión.",
 
     features: [
       {
@@ -290,13 +290,13 @@ export const allSections: Section[] = [
       {
         title: "Requerimientos",
         description:
-          "Canal formal entre el municipio y el proveedor de GGMM mediante pedidos identificados con un número de ticket.",
+          "Canal formal entre el municipio y el proveedor de ggmm mediante pedidos identificados con un número de ticket.",
       },
       {
         title:
           "Administración de Formularios",
         description:
-          "Editor de reportes para personalizar documentos y salidas de información del entorno GGMM.",
+          "Editor de reportes para personalizar documentos y salidas de información del entorno ggmm.",
       },
       {
         title:
@@ -345,7 +345,7 @@ export const allSections: Section[] = [
     title: "Avales de Calidad",
 
     description:
-      "GGMM forma parte de una empresa comprometida con la calidad, con certificaciones internacionales y participación en organizaciones del sector tecnológico.",
+      "ggmm forma parte de una empresa comprometida con la calidad, con certificaciones internacionales y participación en organizaciones del sector tecnológico.",
 
     image:
       "/images/brochure/calidad.webp",
@@ -395,7 +395,7 @@ export const allSections: Section[] = [
       "Una solución integral para las áreas municipales",
 
     description:
-      "GGMM está compuesto por un conjunto de más de 17 áreas y más de 40 módulos destinados a prestar servicios en ámbitos municipales. Cada área cubre el 100% de las necesidades de procesamiento del área municipal correspondiente.",
+      "ggmm está compuesto por un conjunto de más de 17 áreas y más de 40 módulos destinados a prestar servicios en ámbitos municipales. Cada área cubre el 100% de las necesidades de procesamiento del área municipal correspondiente.",
 
     image:
       "/images/brochure/areas-overview.webp",
@@ -466,56 +466,56 @@ export const allSections: Section[] = [
     title: "Experiencia en Latinoamérica",
 
     description:
-      "GGMM cuenta con experiencia en distintos países de Latinoamérica. En algunos mercados el trabajo fue realizado mediante alianzas con empresas locales.",
+      "ggmm cuenta con experiencia en distintos países de Latinoamérica. En algunos mercados el trabajo fue realizado mediante alianzas con empresas locales.",
 
     features: [
       {
         title: "Argentina",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "México",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "República Dominicana",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Nicaragua",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "El Salvador",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Panamá",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Colombia",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Honduras",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Venezuela",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Perú",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Puerto Rico",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
       {
         title: "Chile",
-        description: "Experiencia GGMM.",
+        description: "Experiencia ggmm.",
       },
     ],
   },
@@ -532,7 +532,7 @@ export const allSections: Section[] = [
     title: "Alianzas internacionales",
 
     description:
-      "En distintos países de Latinoamérica GGMM ha trabajado mediante alianzas con empresas locales.",
+      "En distintos países de Latinoamérica ggmm ha trabajado mediante alianzas con empresas locales.",
   },
 
   /* ---------------------------------------------------------
@@ -565,7 +565,7 @@ export const sections: Section[] =
   );
 
 /* =========================================================
-   ÁREAS GGMM DE DISPONIBILIDAD INMEDIATA
+   ÁREAS ggmm DE DISPONIBILIDAD INMEDIATA
    ========================================================= */
 
 export const areas: Module[] = [
@@ -1081,7 +1081,7 @@ export const areas: Module[] = [
  *
  * Los componentes actuales todavía utilizan
  * los nombres Module / modules aunque conceptualmente
- * ahora estamos navegando Áreas GGMM.
+ * ahora estamos navegando Áreas ggmm.
  *
  * Así no necesitamos reescribir todavía:
  *

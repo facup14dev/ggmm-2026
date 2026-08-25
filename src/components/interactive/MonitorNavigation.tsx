@@ -20,6 +20,16 @@ type Props = {
   onChange: (section: SectionId) => void;
 };
 
+const monitorLabels: Partial<
+  Record<SectionId, string>
+> = {
+  nosotros: "Sobre nosotros",
+  software: "Software",
+  servicios: "Servicios",
+  beneficios: "Beneficios",
+  areas: "Áreas y Módulos",
+};
+
 function MonitorNavigation({
   sections,
   moreSections,
@@ -102,12 +112,12 @@ function MonitorNavigation({
 
   return (
     <div className="relative z-40 shrink-0 border-b border-[#ded6ca] bg-[#fbf8f2]">
-      <div className="flex h-[58px] items-stretch px-3 lg:px-4">
+      <div className="flex h-[58px] items-stretch px-2 [@media(max-height:940px)]:h-[50px] xl:px-3">
         {/* =====================================
             NAVEGACIÓN PRINCIPAL
         ====================================== */}
 
-        <div className="flex min-w-0 flex-1 items-stretch overflow-x-auto">
+        <div className="flex min-w-0 flex-1 items-stretch overflow-hidden">
           {sections.map((section) => {
             const isActive =
               activeSection ===
@@ -122,7 +132,7 @@ function MonitorNavigation({
                     section.id,
                   )
                 }
-                className={`group relative flex min-w-max items-center gap-1.5 px-3 text-[11px] font-semibold transition lg:px-4 lg:text-[12px] ${
+                className={`group relative flex min-w-0 basis-0 flex-1 items-center justify-center gap-1 overflow-hidden px-1.5 text-[9px] font-semibold tracking-[-0.01em] transition xl:px-2 xl:text-[10px] 2xl:px-3 2xl:text-[12px] [@media(max-height:940px)]:text-[9px] ${
                   isActive
                     ? "text-[#8d1430]"
                     : "text-[#5e554f] hover:text-[#8d1430]"
@@ -130,7 +140,7 @@ function MonitorNavigation({
               >
                 {section.number && (
                   <span
-                    className={`text-[9px] font-black ${
+                    className={`shrink-0 text-[7px] font-black xl:text-[8px] 2xl:text-[9px] ${
                       isActive
                         ? "text-[#b62037]"
                         : "text-[#aaa097]"
@@ -140,12 +150,13 @@ function MonitorNavigation({
                   </span>
                 )}
 
-                <span>
-                  {section.label}
+                <span className="min-w-0 whitespace-nowrap">
+                  {monitorLabels[section.id] ??
+                    section.label}
                 </span>
 
                 <span
-                  className={`absolute inset-x-3 bottom-0 h-0.5 rounded-full transition ${
+                  className={`absolute inset-x-2 bottom-0 h-0.5 rounded-full transition ${
                     isActive
                       ? "bg-[#8d1430]"
                       : "bg-transparent group-hover:bg-[#8d1430]/20"
@@ -172,7 +183,7 @@ function MonitorNavigation({
               )
             }
             aria-expanded={isMoreOpen}
-            className={`group relative flex h-full items-center gap-1.5 px-4 text-[11px] font-semibold transition lg:text-[12px] ${
+            className={`group relative flex h-full items-center gap-1 px-3 text-[10px] font-semibold transition xl:px-4 xl:text-[11px] 2xl:text-[12px] [@media(max-height:940px)]:px-3 [@media(max-height:940px)]:text-[10px] ${
               isMoreActive ||
               isMoreOpen
                 ? "text-[#8d1430]"
@@ -182,8 +193,8 @@ function MonitorNavigation({
             Más
 
             <ChevronDown
-              size={14}
-              className={`transition-transform duration-200 ${
+              size={13}
+              className={`shrink-0 transition-transform duration-200 ${
                 isMoreOpen
                   ? "rotate-180"
                   : ""
@@ -191,7 +202,7 @@ function MonitorNavigation({
             />
 
             <span
-              className={`absolute inset-x-3 bottom-0 h-0.5 rounded-full transition ${
+              className={`absolute inset-x-2 bottom-0 h-0.5 rounded-full transition ${
                 isMoreActive
                   ? "bg-[#8d1430]"
                   : "bg-transparent"
@@ -244,7 +255,8 @@ function MonitorNavigation({
                         </span>
 
                         <span className="text-[14px] font-semibold leading-4">
-                          {section.label}
+                          {monitorLabels[section.id] ??
+                            section.label}
                         </span>
                       </button>
                     );

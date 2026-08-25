@@ -142,7 +142,7 @@ export default async function handler(
     }
 
     /*
-     * Esta API pertenece a GGMM.
+     * Esta API pertenece a ggmm.
      */
     if (
       businessUnit !== "ggmm"
@@ -272,17 +272,17 @@ export default async function handler(
     const info =
       await transporter.sendMail({
         from:
-          `"Formulario web GGMM" <${smtpFrom}>`,
+          `"Formulario web ggmm" <${smtpFrom}>`,
 
         to: CONTACT_EMAIL_TO,
 
         replyTo: email,
 
         subject:
-          `Nueva consulta web GGMM · ${interest}`,
+          `Nueva consulta web ggmm · ${interest}`,
 
         text: `
-Nueva consulta desde la web de GGMM
+Nueva consulta desde la web de ggmm
 
 Nombre: ${name}
 
@@ -330,7 +330,7 @@ ${message}
         color:#e8c7ce;
       "
     >
-      GGMM
+      ggmm
     </div>
 
     <h1
@@ -438,7 +438,7 @@ ${message}
       });
 
     console.log(
-      "Correo GGMM enviado:",
+      "Correo ggmm enviado:",
       {
         messageId:
           info.messageId,
@@ -460,7 +460,7 @@ ${message}
 
   } catch (error) {
     console.error(
-      "Error enviando correo GGMM:",
+      "Error enviando correo ggmm:",
       error,
     );
 

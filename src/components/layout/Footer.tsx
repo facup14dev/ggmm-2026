@@ -2,6 +2,7 @@ import {
   ArrowUp,
   ExternalLink,
   Mail,
+  MapIcon,
   Phone,
 } from "lucide-react";
 
@@ -116,19 +117,26 @@ function Footer() {
               </a>
 
               <a
-                href="tel:08108880170"
                 className="flex items-center gap-3 text-sm text-white/60 transition hover:text-white"
               >
                 <Phone size={17} />
                 (+54) 3547-459107
               </a>
+
+              <a
+                className="flex items-center gap-3 text-sm text-white/60 transition hover:text-white"
+              >
+                <MapIcon size={17} />
+                Eva Perón 124. Alta Gracia, Córdoba CP - 5186
+              </a>
+
             </div>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-white/40">
-            © {year} GGMM · INFT S.A. Todos
+            © {year} ggmm · INFT S.A. Todos
             los derechos reservados.
           </p>
 

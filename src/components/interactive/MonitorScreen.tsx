@@ -130,7 +130,7 @@ function SectionScreen({
     <div className="grid h-full min-h-0 grid-cols-[1.02fr_0.98fr]">
       {/* TEXTO */}
 
-      <div className="flex min-h-0 min-w-0 flex-col justify-center overflow-hidden border-r border-[#ded6ca] px-8 py-6">
+      <div className="flex min-h-0 min-w-0 flex-col justify-center overflow-hidden border-r border-[#ded6ca] px-8 py-6 [@media(max-height:940px)]:px-6 [@media(max-height:940px)]:py-4">
         {section.eyebrow && (
           <p className="shrink-0 text-[10px] font-bold uppercase tracking-[0.22em] text-[#8d1430]">
             {section.eyebrow}
@@ -146,14 +146,14 @@ function SectionScreen({
         <h1
           className={`max-w-xl font-serif font-bold text-[#211a18] ${
             isHome
-              ? "mt-3 text-[3rem] leading-[0.99]"
+              ? "mt-3 text-[3rem] leading-[0.99] [@media(max-height:940px)]:mt-2 [@media(max-height:940px)]:text-[2.45rem]"
               : "mt-2 text-[2.65rem] leading-[1]"
           }`}
         >
           {section.title}
         </h1>
 
-        <p className="mt-4 max-w-lg text-[13px] leading-6 text-[#60564f]">
+        <p className="mt-4 max-w-lg text-[13px] leading-6 text-[#60564f] [@media(max-height:940px)]:mt-3 [@media(max-height:940px)]:text-[11px] [@media(max-height:940px)]:leading-5">
           {section.description}
         </p>
 
@@ -164,7 +164,7 @@ function SectionScreen({
               onClick={
                 onExploreModules
               }
-              className="mt-5 inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-[#8d1430] px-5 py-3 text-xs font-semibold text-white shadow-lg shadow-[#8d1430]/15 transition hover:bg-[#741027]"
+              className="mt-5 inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-[#8d1430] px-5 py-3 text-xs font-semibold text-white shadow-lg shadow-[#8d1430]/15 transition hover:bg-[#741027] [@media(max-height:940px)]:mt-3 [@media(max-height:940px)]:px-4 [@media(max-height:940px)]:py-2.5"
             >
               {section.ctaLabel}
 
@@ -517,7 +517,7 @@ function ExperienceScreen({
       <div className="relative min-h-0 min-w-0 overflow-hidden bg-white">
         <img
           src="/images/brochure/experiencia-latinoamerica.webp"
-          alt="Mapa de experiencia de GGMM en Latinoamérica"
+          alt="Mapa de experiencia de ggmm en Latinoamérica"
           className="absolute inset-0 h-full w-full object-contain p-3"
         />
       </div>
@@ -563,7 +563,7 @@ function AlliancesScreen({
 
           <p className="mt-2 text-[10px] leading-5 text-white/75">
             La experiencia internacional
-            de GGMM también se ha
+            de ggmm también se ha
             desarrollado mediante
             alianzas con empresas locales.
           </p>
@@ -573,7 +573,7 @@ function AlliancesScreen({
       <div className="relative flex min-h-0 min-w-0 items-center justify-center overflow-hidden bg-white p-8">
         <img
           src="/images/brochure/alianzas-internacionales.webp"
-          alt="Alianzas internacionales de GGMM"
+          alt="Alianzas internacionales de ggmm"
           className="max-h-full max-w-full object-contain"
         />
       </div>
@@ -599,7 +599,7 @@ function AreasIntro() {
         </h1>
 
         <p className="mt-4 max-w-[400px] text-[12px] leading-6 text-[#60564f]">
-          GGMM está compuesto por más de
+          ggmm está compuesto por más de
           17 áreas y más de 40 módulos
           destinados a prestar servicios
           dentro del ámbito municipal.
@@ -628,7 +628,7 @@ function AreasIntro() {
       <div className="relative min-h-0 min-w-0 overflow-hidden bg-[#ebe4d9]">
         <img
           src="/images/brochure/areas-overview.webp"
-          alt="Áreas y módulos disponibles en GGMM"
+          alt="Áreas y módulos disponibles en ggmm"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -642,7 +642,7 @@ function AreasIntro() {
 
             <div>
               <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white/50">
-                Plataforma GGMM
+                Plataforma ggmm
               </p>
 
               <p className="mt-0.5 font-serif text-sm font-bold">
@@ -708,7 +708,7 @@ function SectionVisual({
 
         <div className="absolute inset-x-5 bottom-5">
           <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/65">
-            GGMM
+            ggmm
           </p>
 
           <p className="mt-1 font-serif text-xl font-bold text-white">
@@ -732,7 +732,7 @@ function SectionVisual({
       <div className="relative z-10 flex flex-col items-center text-center">
         <img
           src="/images/ggmmLogo.png"
-          alt="GGMM"
+          alt="ggmm"
           className="max-h-[120px] w-auto max-w-[290px] object-contain"
         />
 
@@ -773,7 +773,7 @@ function AreaScreen({
     <div className="grid h-full min-h-0 grid-cols-[0.98fr_1.02fr]">
       <div className="flex min-h-0 min-w-0 flex-col justify-center overflow-hidden border-r border-[#ded6ca] px-8 py-6">
         <p className="shrink-0 text-[10px] font-black uppercase tracking-[0.22em] text-[#8d1430]">
-          Área GGMM
+          Área ggmm
         </p>
 
         <h1
@@ -898,7 +898,7 @@ function AreaVisual({
 
       <div className="absolute inset-x-5 bottom-5">
         <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/60">
-          GGMM
+          ggmm
         </p>
 
         <h3 className="mt-1 font-serif text-2xl font-bold text-white">

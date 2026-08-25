@@ -91,7 +91,7 @@ function MobileHeader() {
           )}
         </button>
 
-        {/* GGMM */}
+        {/* ggmm */}
 
         <button
           type="button"
@@ -105,7 +105,7 @@ function MobileHeader() {
         >
           <img
             src="/images/ggmmLogo.png"
-            alt="GGMM"
+            alt="ggmm"
             className="h-[30px] w-auto object-contain"
           />
         </button>

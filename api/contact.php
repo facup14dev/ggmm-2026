@@ -1,7 +1,7 @@
 <?php
 
 /**
- * GGMM - FORMULARIO DE CONTACTO
+ * ggmm - FORMULARIO DE CONTACTO
  *
  * Compatible con PHP 5.5.
  * PHPMailer 6.x mediante Composer 2.2 LTS.
@@ -243,7 +243,7 @@ $configPath =
 
 if (!is_file($configPath)) {
     error_log(
-        'GGMM contacto: no existe api/mail-config.php'
+        'ggmm contacto: no existe api/mail-config.php'
     );
 
     respond(
@@ -256,7 +256,7 @@ $config = require $configPath;
 
 if (!is_array($config)) {
     error_log(
-        'GGMM contacto: mail-config.php no devolvió un array.'
+        'ggmm contacto: mail-config.php no devolvió un array.'
     );
 
     respond(
@@ -283,7 +283,7 @@ foreach ($requiredConfig as $key) {
         ) === ''
     ) {
         error_log(
-            'GGMM contacto: falta configuración SMTP: ' .
+            'ggmm contacto: falta configuración SMTP: ' .
             $key
         );
 
@@ -381,7 +381,7 @@ try {
     $mail->isHTML(true);
 
     $mail->Subject =
-        'Nueva consulta desde la web GGMM - ' .
+        'Nueva consulta desde la web ggmm - ' .
         $interest;
 
     /*
@@ -392,7 +392,7 @@ try {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Nueva consulta desde GGMM</title>
+    <title>Nueva consulta desde ggmm</title>
 </head>
 
 <body style="
@@ -423,7 +423,7 @@ try {
                 letter-spacing:2px;
                 color:#e8c7ce;
             ">
-                GGMM
+                ggmm
             </div>
 
             <h1 style="
@@ -530,7 +530,7 @@ try {
      * Texto plano.
      */
     $mail->AltBody =
-        "Nueva consulta desde la web de GGMM\r\n\r\n" .
+        "Nueva consulta desde la web de ggmm\r\n\r\n" .
         "Nombre: " .
         $name .
         "\r\n" .
@@ -575,7 +575,7 @@ try {
 } catch (\Exception $error) {
 
     error_log(
-        'GGMM contacto - error: ' .
+        'ggmm contacto - error: ' .
         $error->getMessage() .
         ' | PHPMailer: ' .
         $mail->ErrorInfo

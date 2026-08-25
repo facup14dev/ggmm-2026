@@ -49,18 +49,18 @@ function BrochurePanel({
         ====================================== */}
 
         <div className="shrink-0 px-6 pb-5 pt-6">
-          <p className="text-[9px] font-black uppercase tracking-[0.22em] text-[#8d1430]">
-            GGMM
+          <p className="text-[12px] font-black tracking-[0.22em] text-[#8d1430]">
+            ggmm
           </p>
 
-          <h2 className="mt-2 font-serif text-[1.9rem] font-black uppercase leading-[1.02] text-[#211a18]">
+          {/* <h2 className="mt-2 font-serif text-[1.9rem] font-black uppercase leading-[1.02] text-[#211a18]">
             Comience la transformación
             digital de su municipio
-          </h2>
+          </h2> */}
 
-          <p className="mt-4 text-[10px] leading-5 text-[#655a52] 2xl:text-[11px]">
+          {/* <p className="mt-4 text-[10px] leading-5 text-[#655a52] 2xl:text-[11px]">
             {section.description}
-          </p>
+          </p> */}
         </div>
 
         {/* =====================================
@@ -101,7 +101,7 @@ function BrochurePanel({
               <p className="mt-2 text-[7px] font-bold uppercase leading-3 tracking-[0.14em] text-white/55">
                 Módulos
                 <br />
-                GGMM
+                ggmm
               </p>
             </div>
           </div>
@@ -181,11 +181,11 @@ function BrochurePanel({
         </div>
 
         <div>
-          <p className="text-[9px] font-black text-[#302824] 2xl:text-[10px]">
+          <p className="text-[12px] font-black text-[#302824] 2xl:text-[12px]">
             {title}
           </p>
 
-          <p className="mt-1 text-[8px] leading-4 text-[#74685f] 2xl:text-[9px]">
+          <p className="mt-1 text-[8px] leading-4 text-[#74685f] 2xl:text-[11px]">
             {description}
           </p>
         </div>
@@ -267,51 +267,22 @@ function AreaBrochure({
     <aside className="flex h-full min-h-0 flex-col overflow-hidden rounded-[1.8rem] border border-[#d7c8b8] bg-[#f5f2ed] shadow-[0_28px_65px_rgba(64,35,25,0.18)]">
       {/* FOTO */}
 
-      <div className="relative h-[165px] shrink-0 overflow-hidden bg-[#681027] 2xl:h-[185px]">
-        {area.image ? (
-          <>
-            <img
-              src={area.image}
-              alt={
-                area.imageAlt ??
-                area.title
-              }
-              className="h-full w-full object-cover"
-              style={{
-                objectPosition:
-                  area.imagePosition ??
-                  "center",
-              }}
-            />
-
-            <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/5 to-transparent" />
-          </>
-        ) : (
-          <>
-            <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full border-[32px] border-white/5" />
-
-            <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full border-[36px] border-white/5" />
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img
-                src="/images/ggmmLogo.png"
-                alt="GGMM"
-                className="max-h-20 max-w-[220px] object-contain brightness-0 invert"
-              />
-            </div>
-          </>
-        )}
-      </div>
-
       {/* NOMBRE */}
 
-      <div className="relative z-10 -mt-6 shrink-0 px-5">
-        <div className="inline-flex max-w-[96%] items-center rounded-l-xl rounded-r-full bg-[#a51f37] px-5 py-3 text-white shadow-md">
-          <p className="text-[11px] font-black uppercase tracking-[0.08em]">
-            {area.title}
-          </p>
-        </div>
+      <div className="shrink-0 bg-[#681027] px-6 py-5 text-white">
+        <p className="text-[8px] font-black uppercase tracking-[0.2em] text-white/50">
+          Área GGMM
+        </p>
+
+        <h2 className="mt-2 font-serif text-[1.6rem] font-black leading-tight">
+          {area.title}
+        </h2>
+
+        <p className="mt-2 text-[9px] leading-4 text-white/65">
+          {area.shortDescription}
+        </p>
       </div>
+
 
       {/* CONTENIDO */}
 
@@ -445,7 +416,7 @@ function AreasBrochure({
 }) {
   return (
     <BrochureShell>
-      <BrochureImage
+      {/* <BrochureImage
         src={
           section.image ??
           "/images/brochure/areas-overview.webp"
@@ -454,7 +425,7 @@ function AreasBrochure({
           section.imageAlt ??
           section.title
         }
-      />
+      /> */}
 
       <BrochureHeading
         number={section.number}
@@ -537,7 +508,7 @@ function CharacteristicsBrochure({
 
           <div className="ml-4">
             <p className="text-[8px] font-black uppercase tracking-[0.22em] text-white/50">
-              Plataforma GGMM
+              Plataforma ggmm
             </p>
 
             <p className="mt-1 font-serif text-xl font-bold">
@@ -604,7 +575,7 @@ function QualityBrochure({
 }) {
   return (
     <BrochureShell>
-      {section.image && (
+      {/* {section.image && (
         <BrochureImage
           src={section.image}
           alt={
@@ -613,7 +584,7 @@ function QualityBrochure({
           }
           heightClass="h-[135px]"
         />
-      )}
+      )} */}
 
       <BrochureHeading
         number="09"
@@ -790,13 +761,13 @@ function ExperienceBrochure({
 
   return (
     <BrochureShell>
-      <div className="relative h-[170px] shrink-0 overflow-hidden bg-white">
+      {/* <div className="relative h-[170px] shrink-0 overflow-hidden bg-white">
         <img
           src="/images/brochure/experiencia-latinoamerica.webp"
-          alt="Experiencia GGMM en Latinoamérica"
+          alt="Experiencia ggmm en Latinoamérica"
           className="h-full w-full object-contain p-3"
         />
-      </div>
+      </div> */}
 
       <BrochureHeading
         number="21"
@@ -874,7 +845,7 @@ function AlliancesBrochure({
 
           <div>
             <p className="text-[8px] font-black uppercase tracking-[0.2em] text-white/50">
-              22 · GGMM
+              22 · ggmm
             </p>
 
             <h2 className="mt-1 font-serif text-xl font-bold">
@@ -886,12 +857,31 @@ function AlliancesBrochure({
       </div>
 
       <div className="flex min-h-0 flex-1 flex-col">
-        <div className="flex min-h-0 flex-1 items-center justify-center bg-white p-5">
+        {/* <div className="flex min-h-0 flex-1 items-center justify-center bg-white p-5">
           <img
             src="/images/brochure/alianzas-internacionales.webp"
-            alt="Alianzas internacionales GGMM"
+            alt="Alianzas internacionales ggmm"
             className="max-h-full max-w-full object-contain"
           />
+        </div> */}
+
+        <div className="ggmm-scrollbar min-h-0 flex-1 overflow-y-auto px-6 py-6">
+          <p className="text-[11px] leading-6 text-[#655a52]">
+            {section.description}
+          </p>
+
+          <div className="mt-5 rounded-2xl border border-[#ddd0c1] bg-white/65 p-5">
+            <SectionLabel>
+              Presencia regional
+            </SectionLabel>
+
+            <p className="mt-3 text-[9px] leading-5 text-[#74685f]">
+              La experiencia internacional de GGMM
+              también se ha desarrollado mediante
+              alianzas estratégicas con empresas
+              locales.
+            </p>
+          </div>
         </div>
 
         <div className="shrink-0 border-t border-[#ddd0c1] px-6 py-5">
@@ -1053,7 +1043,7 @@ function BrochureHeading({
 
         <div>
           <p className="text-[8px] font-black uppercase tracking-[0.2em] text-[#8d1430]">
-            GGMM
+            ggmm
           </p>
 
           <h2 className="mt-1 font-serif text-[1.4rem] font-black uppercase leading-[1.05] text-[#211a18]">
@@ -1116,7 +1106,7 @@ function BrochureFooter() {
         <div>
           <img
             src="/images/ggmmLogo.png"
-            alt="GGMM"
+            alt="ggmm"
             className="h-8 w-auto object-contain brightness-0 invert"
           />
 

@@ -43,7 +43,7 @@ function MobileAreaDetail({
 
               <div className="absolute inset-x-5 bottom-4">
                 <p className="text-[9px] font-black uppercase tracking-[0.18em] text-white/65">
-                  Área GGMM
+                  Área ggmm
                 </p>
 
                 <h3 className="mt-1 text-xl font-bold leading-tight text-white">
@@ -55,7 +55,7 @@ function MobileAreaDetail({
             <div className="flex h-full flex-col items-center justify-center px-6 text-center text-white">
               <img
                 src="/images/ggmmLogo.png"
-                alt="GGMM"
+                alt="ggmm"
                 className="max-h-16 max-w-[190px] object-contain brightness-0 invert"
               />
 

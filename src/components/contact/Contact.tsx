@@ -2,6 +2,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   CheckCircle2,
   Mail,
+  MapIcon,
+  MapMinus,
+  MapPin,
   Phone,
   Send,
 } from "lucide-react";
@@ -54,7 +57,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 const interestOptions = [
   {
     value: "general",
-    label: "Consulta general sobre GGMM",
+    label: "Consulta general sobre ggmm",
   },
   ...areas.map((area) => ({
     value: area.id,
@@ -228,8 +231,15 @@ function Contact() {
               <ContactItem
                 icon={Phone}
                 title="Contacto"
-                value="(+54) 3547-459107"
+                value="(+54) 3547-459107 / 3547-459192"
                 href="tel:+543547459107"
+              />
+              
+              <ContactItem
+                icon={MapPin}
+                title="Ubicación"
+                value="Eva Perón 124. Alta Gracia, Córdoba CP - 5186"
+                href="Eva Perón 124. Alta Gracia, Córdoba CP - 5186"
               />
             </div>
 
@@ -237,7 +247,7 @@ function Contact() {
 
             <div className="mt-10 hidden rounded-3xl border border-[#ded3c3] bg-white/65 p-6 shadow-sm lg:block">
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8d1430]">
-                Plataforma GGMM
+                Plataforma ggmm
               </p>
 
               <p className="mt-3 font-serif text-2xl font-bold text-[#211a18]">

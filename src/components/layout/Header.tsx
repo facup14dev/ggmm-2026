@@ -15,7 +15,7 @@ function Header() {
         >
           <img
             src="/images/ggmmLogo.png"
-            alt="GGMM"
+            alt="ggmm"
             className="h-[45px] w-auto object-contain"
           />
 
@@ -49,7 +49,7 @@ function Header() {
             href="#inicio"
             className="text-sm font-semibold text-[#514740] transition hover:text-[#8d1430]"
           >
-            Plataforma
+            Inicio
           </a>
 
           {/* <a

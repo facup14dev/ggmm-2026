@@ -27,7 +27,7 @@ function MobileAbout({
       className="scroll-mt-20 px-5 pt-10"
     >
       <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#801628]">
-        03 · GGMM
+        03 · ggmm
       </p>
 
       <h2 className="mt-2 text-[26px] font-bold tracking-[-0.02em] text-[#1f1b19]">
