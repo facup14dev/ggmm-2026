@@ -38,7 +38,6 @@ function BrochurePanel({
   }
 
   function HomeBrochure({
-    section,
   }: {
     section: Section;
   }) {

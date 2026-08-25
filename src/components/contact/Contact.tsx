@@ -2,8 +2,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   CheckCircle2,
   Mail,
-  MapIcon,
-  MapMinus,
   MapPin,
   Phone,
   Send,
