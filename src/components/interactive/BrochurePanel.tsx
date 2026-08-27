@@ -1016,6 +1016,8 @@ function BrochureImage({
       <img
         src={src}
         alt={alt}
+        loading="lazy"
+        decoding="async"
         className="h-full w-full object-cover"
       />
 
@@ -1104,8 +1106,11 @@ function BrochureFooter() {
       <div className="flex items-end justify-between gap-4">
         <div>
           <img
-            src="/images/ggmmLogo.png"
-            alt="ggmm"
+            src="/images/ggmmLogo.webp"
+            alt="GGMM - Gestión Gubernamental Municipal"
+            width={700}
+            height={303}
+            decoding="async"
             className="h-8 w-auto object-contain brightness-0 invert"
           />
 

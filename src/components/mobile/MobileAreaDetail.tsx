@@ -31,6 +31,8 @@ function MobileAreaDetail({
                   area.imageAlt ??
                   area.title
                 }
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
                 style={{
                   objectPosition:
@@ -54,8 +56,12 @@ function MobileAreaDetail({
           ) : (
             <div className="flex h-full flex-col items-center justify-center px-6 text-center text-white">
               <img
-                src="/images/ggmmLogo.png"
-                alt="ggmm"
+                src="/images/ggmmLogo.webp"
+                alt="GGMM - Gestión Gubernamental Municipal"
+                width={700}
+                height={303}
+                loading="lazy"
+                decoding="async"
                 className="max-h-16 max-w-[190px] object-contain brightness-0 invert"
               />
 

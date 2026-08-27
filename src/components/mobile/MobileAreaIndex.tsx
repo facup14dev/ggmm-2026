@@ -11,6 +11,10 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import {
+  areaHashById,
+} from "../../lib/ggmmNavigation";
+
 import type {
   Module,
   ModuleId,
@@ -19,6 +23,7 @@ import type {
 type Props = {
   areas: Module[];
   activeArea: ModuleId | null;
+
   onSelect: (
     id: ModuleId,
   ) => void;
@@ -79,51 +84,75 @@ function MobileAreaIndex({
           </p>
         </div>
 
-        {/* 3 × 3 */}
-
         <div className="mt-6 grid grid-cols-3 gap-x-3 gap-y-6">
-          {areas.map((area) => {
-            const Icon =
-              icons[area.id];
+          {areas.map(
+            (area) => {
+              const Icon =
+                icons[area.id];
 
-            const isActive =
-              activeArea ===
-              area.id;
+              const isActive =
+                activeArea ===
+                area.id;
 
-            return (
-              <button
-                key={area.id}
-                type="button"
-                onClick={() =>
-                  onSelect(area.id)
-                }
-                aria-pressed={
-                  isActive
-                }
-                className="group flex min-w-0 flex-col items-center"
-              >
-                <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-xl transition ${
+              return (
+                <a
+                  key={area.id}
+                  href={
+                    areaHashById[
+                      area.id
+                    ]
+                  }
+                  onClick={(
+                    event,
+                  ) => {
+                    /*
+                     * El href queda en el HTML
+                     * para navegación semántica.
+                     * React controla la transición
+                     * suave y el estado activo.
+                     */
+                    event.preventDefault();
+
+                    onSelect(
+                      area.id,
+                    );
+                  }}
+                  aria-current={
                     isActive
-                      ? "scale-105 bg-[#801628] text-white shadow-md"
-                      : "bg-[#f6ece8] text-[#a83543] group-active:scale-95"
-                  }`}
+                      ? "true"
+                      : undefined
+                  }
+                  className="group flex min-w-0 flex-col items-center"
                 >
-                  <Icon size={20} />
-                </div>
+                  <div
+                    className={`flex h-12 w-12 items-center justify-center rounded-xl transition ${
+                      isActive
+                        ? "scale-105 bg-[#801628] text-white shadow-md"
+                        : "bg-[#f6ece8] text-[#a83543] group-active:scale-95"
+                    }`}
+                  >
+                    <Icon
+                      size={
+                        20
+                      }
+                    />
+                  </div>
 
-                <span
-                  className={`mt-2 max-w-[88px] text-center text-[10px] font-medium leading-[1.25] ${
-                    isActive
-                      ? "font-bold text-[#801628]"
-                      : "text-[#574142]"
-                  }`}
-                >
-                  {area.label}
-                </span>
-              </button>
-            );
-          })}
+                  <span
+                    className={`mt-2 max-w-[88px] text-center text-[10px] font-medium leading-[1.25] ${
+                      isActive
+                        ? "font-bold text-[#801628]"
+                        : "text-[#574142]"
+                    }`}
+                  >
+                    {
+                      area.label
+                    }
+                  </span>
+                </a>
+              );
+            },
+          )}
         </div>
       </div>
     </section>

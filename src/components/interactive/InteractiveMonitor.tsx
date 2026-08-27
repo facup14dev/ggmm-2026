@@ -1,4 +1,5 @@
 import {
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -8,6 +9,14 @@ import {
   moreSections,
   sections,
 } from "../../data/sections";
+
+import {
+  GGMM_NAVIGATION_EVENT,
+  getNavigationTargetFromHash,
+  isDesktopViewport,
+  navigateToArea,
+  navigateToSection,
+} from "../../lib/ggmmNavigation";
 
 import type {
   ModuleId,
@@ -45,11 +54,143 @@ function InteractiveMonitor() {
     [activeModule],
   );
 
+  /*
+   * Sincroniza la pantalla del monitor con
+   * la URL.
+   *
+   * Ejemplos:
+   *
+   * #software
+   * #beneficios
+   * #administracion-tributaria
+   * #recursos-humanos
+   */
+  useEffect(() => {
+    const syncFromUrl = (
+      shouldScroll: boolean,
+    ) => {
+      const target =
+        getNavigationTargetFromHash();
+
+      if (!target) {
+        return;
+      }
+
+      if (
+        target.type ===
+        "area"
+      ) {
+        setActiveSection(
+          "areas",
+        );
+
+        setActiveModule(
+          target.id,
+        );
+      } else if (
+        target.id !==
+        "contacto"
+      ) {
+        /*
+         * "contacto" vive fuera del monitor,
+         * así que no intentamos mostrarlo
+         * dentro de la pantalla.
+         */
+        setActiveSection(
+          target.id,
+        );
+
+        setActiveModule(null);
+      } else {
+        return;
+      }
+
+      if (
+        shouldScroll &&
+        isDesktopViewport()
+      ) {
+        window.setTimeout(
+          () => {
+            document
+              .getElementById(
+                "inicio",
+              )
+              ?.scrollIntoView({
+                behavior:
+                  "smooth",
+
+                block:
+                  "start",
+              });
+          },
+          30,
+        );
+      }
+    };
+
+    /*
+     * Primera carga:
+     *
+     * si alguien abre directamente
+     * /#administracion-financiera
+     * mostramos esa área.
+     */
+    syncFromUrl(false);
+
+    const handleHashChange =
+      () =>
+        syncFromUrl(true);
+
+    const handlePopState =
+      () =>
+        syncFromUrl(true);
+
+    const handleInternalNavigation =
+      () =>
+        syncFromUrl(false);
+
+    window.addEventListener(
+      "hashchange",
+      handleHashChange,
+    );
+
+    window.addEventListener(
+      "popstate",
+      handlePopState,
+    );
+
+    window.addEventListener(
+      GGMM_NAVIGATION_EVENT,
+      handleInternalNavigation,
+    );
+
+    return () => {
+      window.removeEventListener(
+        "hashchange",
+        handleHashChange,
+      );
+
+      window.removeEventListener(
+        "popstate",
+        handlePopState,
+      );
+
+      window.removeEventListener(
+        GGMM_NAVIGATION_EVENT,
+        handleInternalNavigation,
+      );
+    };
+  }, []);
+
   const handleSectionChange = (
     sectionId: SectionId,
   ) => {
     setActiveSection(sectionId);
     setActiveModule(null);
+
+    navigateToSection(
+      sectionId,
+    );
   };
 
   const handleModuleChange = (
@@ -57,12 +198,22 @@ function InteractiveMonitor() {
   ) => {
     setActiveSection("areas");
     setActiveModule(moduleId);
+
+    navigateToArea(moduleId);
   };
 
-  const handleExploreModules = () => {
-    setActiveSection("areas");
-    setActiveModule(null);
-  };
+  const handleExploreModules =
+    () => {
+      setActiveSection(
+        "areas",
+      );
+
+      setActiveModule(null);
+
+      navigateToSection(
+        "areas",
+      );
+    };
 
   const monitor = (
     <div className="relative mx-auto w-full max-w-[1050px] 2xl:max-w-[1180px]">
@@ -148,7 +299,7 @@ function InteractiveMonitor() {
   );
 
   /*
-   * La altura del folleto ahora deriva
+   * La altura del folleto deriva
    * directamente de la del monitor.
    */
   const brochure = (
@@ -172,7 +323,8 @@ function InteractiveMonitor() {
   return (
     <section
       id="inicio"
-      className="bg-[#d9d3ca]"
+      className="scroll-mt-20 bg-[#d9d3ca]"
+      aria-label="Plataforma GGMM"
     >
       <OfficeScene
         monitor={monitor}

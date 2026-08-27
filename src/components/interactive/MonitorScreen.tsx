@@ -517,7 +517,11 @@ function ExperienceScreen({
       <div className="relative min-h-0 min-w-0 overflow-hidden bg-white">
         <img
           src="/images/brochure/experiencia-latinoamerica.webp"
-          alt="Mapa de experiencia de ggmm en Latinoamérica"
+          alt="Mapa de experiencia de GGMM en Latinoamérica"
+          width={1450}
+          height={1670}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-contain p-3"
         />
       </div>
@@ -573,7 +577,11 @@ function AlliancesScreen({
       <div className="relative flex min-h-0 min-w-0 items-center justify-center overflow-hidden bg-white p-8">
         <img
           src="/images/brochure/alianzas-internacionales.webp"
-          alt="Alianzas internacionales de ggmm"
+          alt="Alianzas internacionales de GGMM"
+          width={1220}
+          height={870}
+          loading="lazy"
+          decoding="async"
           className="max-h-full max-w-full object-contain"
         />
       </div>
@@ -628,7 +636,11 @@ function AreasIntro() {
       <div className="relative min-h-0 min-w-0 overflow-hidden bg-[#ebe4d9]">
         <img
           src="/images/brochure/areas-overview.webp"
-          alt="Áreas y módulos disponibles en ggmm"
+          alt="Áreas y módulos disponibles en GGMM"
+          width={740}
+          height={493}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -701,6 +713,8 @@ function SectionVisual({
             section.imageAlt ??
             section.title
           }
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover"
         />
 
@@ -731,8 +745,13 @@ function SectionVisual({
 
       <div className="relative z-10 flex flex-col items-center text-center">
         <img
-          src="/images/ggmmLogo.png"
-          alt="ggmm"
+          src="/images/ggmmLogo.webp"
+          alt="GGMM - Gestión Gubernamental Municipal"
+          width={700}
+          height={303}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="max-h-[120px] w-auto max-w-[290px] object-contain"
         />
 
@@ -886,6 +905,8 @@ function AreaVisual({
           area.imageAlt ??
           area.title
         }
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover transition duration-500"
         style={{
           objectPosition:

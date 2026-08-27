@@ -2,12 +2,192 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/images/ggmmLogo.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ggmm</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/images/ggmmLogo.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <!-- =====================================================
+         SEO PRINCIPAL
+    ====================================================== -->
+
+    <title>
+      GGMM | Software de Gestión y Digitalización Municipal
+    </title>
+
+    <meta
+      name="description"
+      content="GGMM es una plataforma integral para la digitalización de gobiernos municipales, con soluciones para administración, recaudación, catastro, finanzas, recursos humanos y atención al ciudadano."
+    />
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <link
+      rel="canonical"
+      href="https://ggmm.com.ar/"
+    />
+
+    <!-- =====================================================
+         IDENTIDAD / NAVEGADOR
+    ====================================================== -->
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/ggmmLogo.ico"
+    />
+
+    <meta
+      name="theme-color"
+      content="#681027"
+    />
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+      property="og:locale"
+      content="es_AR"
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:site_name"
+      content="GGMM"
+    />
+
+    <meta
+      property="og:title"
+      content="GGMM | Software de Gestión y Digitalización Municipal"
+    />
+
+    <meta
+      property="og:description"
+      content="Plataforma integral para digitalizar la gestión municipal, optimizar procesos, mejorar la atención al ciudadano y fortalecer la recaudación."
+    />
+
+    <meta
+      property="og:url"
+      content="https://ggmm.com.ar/"
+    />
+
+    <meta
+      property="og:image"
+      content="https://ggmm.com.ar/images/ggmmLogo.png"
+    />
+
+    <meta
+      property="og:image:width"
+      content="2302"
+    />
+
+    <meta
+      property="og:image:height"
+      content="998"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="GGMM - Gestión Gubernamental Municipal"
+    />
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="GGMM | Software de Gestión y Digitalización Municipal"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Plataforma integral para digitalizar la gestión de gobiernos municipales."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://ggmm.com.ar/images/ggmmLogo.png"
+    />
+
+    <!-- =====================================================
+         DATOS ESTRUCTURADOS
+    ====================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ggmm.com.ar/#organization",
+            "name": "INFT S.A.",
+            "url": "https://inft.com.ar/",
+            "email": "info@inft.com.ar",
+            "brand": {
+              "@type": "Brand",
+              "name": "GGMM",
+              "logo": "https://ggmm.com.ar/images/ggmmLogo.png"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ggmm.com.ar/#website",
+            "url": "https://ggmm.com.ar/",
+            "name": "GGMM",
+            "alternateName": "Gestión Gubernamental Municipal",
+            "description": "Plataforma integral para la digitalización y gestión de gobiernos municipales.",
+            "publisher": {
+              "@id": "https://ggmm.com.ar/#organization"
+            },
+            "inLanguage": "es"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://ggmm.com.ar/#software",
+            "name": "GGMM",
+            "alternateName": "Gestión Gubernamental Municipal",
+            "url": "https://ggmm.com.ar/",
+            "applicationCategory": "BusinessApplication",
+            "description": "Plataforma integral, modular y escalable para digitalizar procesos de gestión municipal, administración, recaudación, catastro, finanzas, recursos humanos y atención al ciudadano.",
+            "provider": {
+              "@id": "https://ggmm.com.ar/#organization"
+            },
+            "inLanguage": "es"
+          }
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
   </body>
 </html>

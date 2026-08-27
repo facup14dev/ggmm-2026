@@ -14,8 +14,13 @@ function Header() {
           aria-label="Ir al inicio"
         >
           <img
-            src="/images/ggmmLogo.png"
-            alt="ggmm"
+            src="/images/ggmmLogo.webp"
+            alt="GGMM - Gestión Gubernamental Municipal"
+            width={700}
+            height={303}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="h-[45px] w-auto object-contain"
           />
 

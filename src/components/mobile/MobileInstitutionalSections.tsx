@@ -4,8 +4,16 @@ import {
 } from "lucide-react";
 
 import {
+  useEffect,
   useState,
 } from "react";
+
+import {
+  GGMM_NAVIGATION_EVENT,
+  getNavigationTargetFromHash,
+  isMobileViewport,
+  navigateToSection,
+} from "../../lib/ggmmNavigation";
 
 import type {
   Section,
@@ -27,7 +35,9 @@ function MobileInstitutionalSections({
   sections,
 }: Props) {
   const [openSection, setOpenSection] =
-    useState<SectionId | null>(null);
+    useState<SectionId | null>(
+      null,
+    );
 
   const institutionalSections =
     sections.filter((section) =>
@@ -35,6 +45,129 @@ function MobileInstitutionalSections({
         section.id,
       ),
     );
+
+  /*
+   * Si alguien abre:
+   *
+   * /#software
+   * /#servicios
+   * /#beneficios
+   * /#calidad
+   *
+   * abrimos automáticamente el acordeón
+   * correcto en mobile.
+   */
+  useEffect(() => {
+    const syncFromUrl = (
+      shouldScroll: boolean,
+    ) => {
+      const target =
+        getNavigationTargetFromHash();
+
+      if (
+        !target ||
+        target.type !==
+          "section" ||
+        !supportedSections.includes(
+          target.id,
+        )
+      ) {
+        return;
+      }
+
+      setOpenSection(
+        target.id,
+      );
+
+      if (
+        shouldScroll &&
+        isMobileViewport()
+      ) {
+        window.setTimeout(
+          () => {
+            document
+              .getElementById(
+                `mobile-${target.id}`,
+              )
+              ?.scrollIntoView({
+                behavior:
+                  "smooth",
+
+                block:
+                  "start",
+              });
+          },
+          40,
+        );
+      }
+    };
+
+    syncFromUrl(false);
+
+    const handleHashChange =
+      () =>
+        syncFromUrl(true);
+
+    const handlePopState =
+      () =>
+        syncFromUrl(true);
+
+    const handleInternalNavigation =
+      () =>
+        syncFromUrl(true);
+
+    window.addEventListener(
+      "hashchange",
+      handleHashChange,
+    );
+
+    window.addEventListener(
+      "popstate",
+      handlePopState,
+    );
+
+    window.addEventListener(
+      GGMM_NAVIGATION_EVENT,
+      handleInternalNavigation,
+    );
+
+    return () => {
+      window.removeEventListener(
+        "hashchange",
+        handleHashChange,
+      );
+
+      window.removeEventListener(
+        "popstate",
+        handlePopState,
+      );
+
+      window.removeEventListener(
+        GGMM_NAVIGATION_EVENT,
+        handleInternalNavigation,
+      );
+    };
+  }, []);
+
+  const handleToggle = (
+    sectionId: SectionId,
+  ) => {
+    const isCurrentlyOpen =
+      openSection ===
+      sectionId;
+
+    setOpenSection(
+      isCurrentlyOpen
+        ? null
+        : sectionId,
+    );
+
+    if (!isCurrentlyOpen) {
+      navigateToSection(
+        sectionId,
+      );
+    }
+  };
 
   return (
     <section
@@ -73,12 +206,14 @@ function MobileInstitutionalSections({
                 <button
                   type="button"
                   onClick={() =>
-                    setOpenSection(
-                      isOpen
-                        ? null
-                        : section.id,
+                    handleToggle(
+                      section.id,
                     )
                   }
+                  aria-expanded={
+                    isOpen
+                  }
+                  aria-controls={`mobile-${section.id}-content`}
                   className="flex w-full items-center justify-between gap-4 p-5 text-left"
                 >
                   <div className="min-w-0">
@@ -107,7 +242,10 @@ function MobileInstitutionalSections({
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-[#f0dfde] px-5 pb-5 pt-4">
+                  <div
+                    id={`mobile-${section.id}-content`}
+                    className="border-t border-[#f0dfde] px-5 pb-5 pt-4"
+                  >
                     {section.image && (
                       <div className="mb-5 overflow-hidden rounded-xl">
                         <img
@@ -119,6 +257,7 @@ function MobileInstitutionalSections({
                             section.title
                           }
                           className="h-[170px] w-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
