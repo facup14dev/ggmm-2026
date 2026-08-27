@@ -82,6 +82,11 @@ function getInterestLabel(value: string) {
   );
 }
 
+console.log(
+  "CONTACT ENDPOINT:",
+  contactEndpoint,
+);
+
 function Contact() {
   const [wasSubmitted, setWasSubmitted] =
     useState(false);
