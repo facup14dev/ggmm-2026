@@ -72,7 +72,8 @@ const interestOptions = [
  */
 const contactEndpoint =
   import.meta.env.CONTACT_ENDPOINT?.trim() ||
-  "/api/contact.php";
+  "/api/contactVercel.ts";
+  //todo: cambiar
 
 function getInterestLabel(value: string) {
   return (
