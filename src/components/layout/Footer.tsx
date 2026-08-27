@@ -28,13 +28,15 @@ function Footer() {
 
   return (
     <footer className="bg-[#211a18] text-white">
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 py-8 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
           {/* MARCA */}
           <div>
-            <p className="font-serif text-4xl font-black tracking-[-0.06em] text-white">
-              ggmm
-            </p>
+            <img
+              src="/images/ggmmLogo.png"
+              alt="ggmm"
+              className="h-8 w-auto object-contain brightness-0 invert"
+            />
 
             <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-white/45">
               Gestión Gubernamental Municipal
@@ -120,7 +122,7 @@ function Footer() {
                 className="flex items-center gap-3 text-sm text-white/60 transition hover:text-white"
               >
                 <Phone size={17} />
-                (+54) 3547-459107
+                (+54) 3547-459107 <br></br> (+54) 3547-459192
               </a>
 
               <a

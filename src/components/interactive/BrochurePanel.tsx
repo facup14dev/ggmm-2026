@@ -48,9 +48,9 @@ function BrochurePanel({
         ====================================== */}
 
         <div className="shrink-0 px-6 pb-5 pt-6">
-          <p className="text-[12px] font-black tracking-[0.22em] text-[#8d1430]">
+          {/* <p className="text-[12px] font-black tracking-[0.22em] text-[#8d1430]">
             ggmm
-          </p>
+          </p> */}
 
           {/* <h2 className="mt-2 font-serif text-[1.9rem] font-black uppercase leading-[1.02] text-[#211a18]">
             Comience la transformación
