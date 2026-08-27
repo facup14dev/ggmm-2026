@@ -71,7 +71,7 @@ const interestOptions = [
  *   VITE_CONTACT_ENDPOINT=/api/contact
  */
 const contactEndpoint =
-  import.meta.env.VITE_CONTACT_ENDPOINT?.trim() ||
+  import.meta.env.CONTACT_ENDPOINT?.trim() ||
   "/api/contact.php";
 
 function getInterestLabel(value: string) {
